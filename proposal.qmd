@@ -30,18 +30,29 @@ allbus <- read_dta(here("data","raw", "ZA5280_v2-1-0.dta",  "ZA5280_v2-1-0.dta")
 ```
 
 ```{r}
+# First plot.
+
+# Initial sorting of the column names, so we can find the proper variables easier.
 alphabetic_allbus <- allbus[, order(colnames(allbus))]
 allbus %>% 
+  # Filtering only proper values for the ep01 variable. (personal economic evaluation)
   filter(ep01 %in% c(1, 2, 3, 4, 5)) %>% 
+  # Filtering only the proper values for the pv01 variable. (voting intention)
+  # we removed don't know, no answer, answer rejected and not eligible to vote.
   filter(pv01 %in% c(1, 2, 3, 4, 6, 42, 90, 91)) %>% 
+  # we created our own voting variable and made it able to compute expected turnout.
   mutate(voting_intention = if_else(pv01 %in% c(1, 2, 3, 4, 6, 42, 90), 1, 0), 
          voting_intention = as.factor(voting_intention)) %>% 
+  # we removed all unnecessary variables.
   select(ep01, pv01, voting_intention) %>%
   ggplot(aes(x = ep01, fill = voting_intention)) + geom_bar(position = "fill")
 ```
 
+As we can see, people with are more negative opinion on the economic situation in Germany are more likely to announce that they would not be voting.
+
 ```{r}
 allbus %>% group_by(pv01) %>% summarise(n())
+# Very quick overview on how people answered the voting intention question.
 ```
 
 ## Analysis Plan
