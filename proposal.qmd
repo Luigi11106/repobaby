@@ -11,7 +11,7 @@ date: today
 
 <!-- Describe the dataset: source, licence, dimensions, key variables. -->
 Source: https://search.gesis.org/research_data/ZA5280
-License: CC BY 4.0
+License: open source
 
 ## Research Questions
 
