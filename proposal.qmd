@@ -55,6 +55,15 @@ allbus %>% group_by(pv01) %>% summarise(n())
 # Very quick overview on how people answered the voting intention question.
 ```
 
+```{r}
+allbus %>% 
+  filter(ep01 %in% c(1, 2, 3, 4, 5)) %>% 
+  mutate(eastwest = as.factor(eastwest)) %>%
+  ggplot(aes(x = ep01, fill = eastwest)) + geom_bar(position = "fill") + labs(x = "Einordnung der Wirtschaftslage \n (1 = sehr gut, 5 = sehr schlecht)", y = "Ostdeutsche (blau) \n versus Westdeutsche (rot)")
+```
+
+As we can see here, East Germans are more likely to have a negative view on Germany's economic situation than West Germans.
+
 ## Analysis Plan
 
 1.  Research question
@@ -69,7 +78,7 @@ allbus %>% group_by(pv01) %>% summarise(n())
 
 2.  Question
 
--   Data basis: ALLBUS 2021 or GLES Tracking 2021 (both contain redistribution items, income, and future expectations).
+-   Data basis: ALLBUS 2021
 -   Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
 -   Bivariate:
     -   Correlation income ↔ support for redistribution (expected: negative)
