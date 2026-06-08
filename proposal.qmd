@@ -2,7 +2,7 @@
 title: "Project Proposal"
 author:
   - "Group Member 1"
-  - "Group Member 2"
+  - "Friedel Luca"
   - "Group Member 3"
 date: today
 ---
@@ -10,6 +10,8 @@ date: today
 ## Dataset
 
 <!-- Describe the dataset: source, licence, dimensions, key variables. -->
+Source: https://search.gesis.org/research_data/ZA5280
+License: CC BY 4.0
 
 ## Research Questions
 
