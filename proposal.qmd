@@ -1,22 +1,23 @@
 ---
 title: "Project Proposal"
 author:
-  - "Group Member 1"
+  - "Petras Paul"
   - "Friedel Luca"
-  - "Group Member 3"
-date: today
+  - "Baumgartner Luis"
+  - "Reck Colin"
+date: 2026-06-08
 ---
 
 ## Dataset
 
 <!-- Describe the dataset: source, licence, dimensions, key variables. -->
 Source: https://search.gesis.org/research_data/ZA5280
-License: open source
+License: Open Source
 
 ## Research Questions
 
-1.
-2.
+1. How does economic growth affect electoral behaviour such as election outcome and voter turnout? Rural/urban, East/West ...
+2. To what extent do objective net household income and subjective expectations regarding one's own future economic situation influence support for state income redistribution during the pandemic year of 2021?
 
 ## Initial EDA
 
