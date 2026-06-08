@@ -90,3 +90,37 @@ As we can see here, East Germans are more likely to have a negative view on Germ
     -   Comparison of ΔR² → which block explains more variance
 -   Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
 -   Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
+
+## Workflow organisation
+
+### Code style
+
+We will follow the Tidyverse Style Guide. Code formatting will be handled using the styler package, ideally configured to format code automatically on save. In addition, we will enforce consistent formatting through a GitHub Actions workflow that checks whether the code complies with the defined style guide.
+
+### Packages
+
+As of now we will use following packages in our project:
+
+-   tidyverse
+
+-   here
+
+-   haven
+
+-   janitor
+
+-   glue
+
+If we don't actively encounter version incompatibility problems, we will probably not use package version locks as we're assuming that package versions are generally backwards compatible.
+
+### Git workflow
+
+The main idea behind branching is to enable a group of people to work simultaneously on the same project without interfering with each other, while also partitioning features or logically related steps to improve clarity and flexibility. This is exactly how we will use it.
+
+We follow a feature-based branching strategy, where each step or logically related set of steps has its own branch. These branches are accessible to all team members if needed; however, to prevent conflicts, we generally restrict work on a given branch to one team member at a time.
+
+### .gitignore
+
+What we will exclude from git is user specific data, because it is irrelevant for others and potentially private, as well as build artefacts and OS noise, as it is irrelevant to others as well.
+
+What we will not exclude is all relevant working data, informational files, as well as environmental files.
