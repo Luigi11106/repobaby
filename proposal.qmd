@@ -11,13 +11,13 @@ date: 2026-06-08
 ## Dataset
 
 <!-- Describe the dataset: source, licence, dimensions, key variables. -->
-Source: https://search.gesis.org/research_data/ZA5280
-License: Open Source
+
+Source: https://search.gesis.org/research_data/ZA5280 License: Open Source
 
 ## Research Questions
 
-1. How does economic growth affect electoral behaviour such as election outcome and voter turnout? Rural/urban, East/West ...
-2. To what extent do objective net household income and subjective expectations regarding one's own future economic situation influence support for state income redistribution during the pandemic year of 2021?
+1.  To what extent do economic fluctuations (measured by GDP, growth, or a decline in GDP) influence voter turnout and the election results of the governing parties in German federal elections?
+2.  To what extent do the objective economic situation (net household income) and the subjective expectation regarding one's own future financial situation influence support for state income redistribution in Germany during the pandemic year of 2021?
 
 ## Initial EDA
 
@@ -25,12 +25,48 @@ License: Open Source
 #| label: load-data
 library(tidyverse)
 library(here)
-
-# data <- read_csv(here("data", "raw", "data.csv"))
+library(haven)
+allbus <- read_dta(here("data","raw", "ZA5280_v2-1-0.dta",  "ZA5280_v2-1-0.dta"))
 ```
 
-<!-- Add 2–3 exploratory plots and a brief commentary on what you observe. -->
+```{r}
+alphabetic_allbus <- allbus[, order(colnames(allbus))]
+allbus %>% 
+  filter(ep01 %in% c(1, 2, 3, 4, 5)) %>% 
+  filter(pv01 %in% c(1, 2, 3, 4, 6, 42, 90, 91)) %>% 
+  mutate(voting_intention = if_else(pv01 %in% c(1, 2, 3, 4, 6, 42, 90), 1, 0), 
+         voting_intention = as.factor(voting_intention)) %>% 
+  select(ep01, pv01, voting_intention) %>%
+  ggplot(aes(x = ep01, fill = voting_intention)) + geom_bar(position = "fill")
+```
+
+```{r}
+allbus %>% group_by(pv01) %>% summarise(n())
+```
 
 ## Analysis Plan
 
-<!-- Outline the methods you plan to use to answer your research questions. -->
+1.  Research question
+
+-   Data basis: ALLBUS 2021, linked with macroeconomic time series (Destatis GDP growth) covering the election year.
+-   Descriptive: Frequency distributions of the DVs, means/SDs of the IV across election years, cross-tabulations of region × voting behavior.
+-   Bivariate: Correlations between GDP growth and aggregated voter turnout/governing-party vote; chi² tests for categorical control variables.
+-   Multivariate:
+    -   Logistic regression 1: Voter turnout \~ GDP growth + control variables
+    -   Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
+-   Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
+
+2.  Question
+
+-   Data basis: ALLBUS 2021 or GLES Tracking 2021 (both contain redistribution items, income, and future expectations).
+-   Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
+-   Bivariate:
+    -   Correlation income ↔ support for redistribution (expected: negative)
+    -   Correlation expectation ↔ support for redistribution (expected: more pessimistic expectation → higher support)
+    -   Multivariate — hierarchical linear regression:
+    -   Model 1: DV \~ control variables
+    -   Model 2: + IV1 (objective income)
+    -   Model 3: + IV2 (subjective expectation)
+    -   Comparison of ΔR² → which block explains more variance
+-   Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
+-   Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
