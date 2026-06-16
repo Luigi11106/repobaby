@@ -2,7 +2,7 @@ name: R CI (run, test, format)
 
 on:
   push:
-    branches: [ "main"]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -23,7 +23,14 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       - name: Install dependencies
-        run: Rscript -e "install.packages(c('tidyverse', 'ggplot2', 'haven', 'here'))" # add used packages here or alternatively work with renv.lock file
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+           extra-packages: |
+             any::tidyverse
+             any::ggplot2
+             any::haven
+             any::here
+             # add used packages here or alternatively work with renv.lock file
       
       - name: Run R scripts
         run: |
@@ -42,8 +49,12 @@ jobs:
       
       - uses: r-lib/actions/setup-r@v2
       
-      - name: Install styler
-        run: Rscript -e "install.packages(c('styler', 'knitr'))"
+      - name: Install dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+           extra-packages: |
+             any::styler
+             any::knitr
       
       - name: Check Formatting
         run: Rscript -e "styler::style_dir('.', dry = 'fail')"
