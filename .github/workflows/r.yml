@@ -1,0 +1,38 @@
+name: R CI (run, format)
+
+on:
+  push:
+    branches: [ "main", "workflow-test" ]
+  pull_request:
+    branches: [ "main", "workflow-test" ]
+
+jobs:
+  runandtest:
+    name: Gate 1 - Run
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: r-lib/actions/setup-r@v2
+      
+      - name: Install dependencies
+        run: |
+          Rscript -e "install.packages('devtools')"
+          Rscript -e "devtools::install_deps(dependencies = TRUE)"
+      
+      - name: Run tests
+        run: Rscript -e "devtools::test()"
+
+  formatcheck:
+    name: Gate 2 - Format
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      
+      - uses: r-lib/actions/setup-r@v2
+      
+      - name: Install styler
+        run: Rscript -e "install.packages('styler')"
+      
+      - name: Check Formatting
+        run: Rscript -e "styler::style_dir('.', dry = 'fail')"
