@@ -18,8 +18,9 @@ unemp <- read_csv2(
   file = here("data", "raw", "unemp.csv"),
   skip = 8,
   # Again, we skip the first few rows without values to fit the data correctly.
-  col_names = c("month", "unemployment_total", "inflow_unemployment", "outflow_unemployment", "unemployment_rate")
+  col_names = c("month", "unemployment_total", "inflow_unemployment", "outflow_unemployment", "unemployment_rate"),
   # The column names were proactively translated into English.
+  n_max = 229
 )
 
 
