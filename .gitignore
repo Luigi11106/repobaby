@@ -11,3 +11,6 @@ _site/
 .DS_Store
 Thumbs.db
 .positai
+
+# Allbus data
+data/raw/ZA8835*
