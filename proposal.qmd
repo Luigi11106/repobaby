@@ -6,6 +6,10 @@ author:
   - "Baumgartner Luis"
   - "Reck Colin"
 date: 2026-06-08
+format:
+  pdf:
+    toc: true
+    number-sections: true
 ---
 
 ## Dataset
