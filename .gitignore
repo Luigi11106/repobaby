@@ -14,3 +14,5 @@ Thumbs.db
 
 # Allbus data
 data/raw/ZA8835*
+
+**/*.quarto_ipynb
