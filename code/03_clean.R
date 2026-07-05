@@ -32,7 +32,6 @@ elect_clean <- elect_raw %>%
   # Finally, we remove the previous date variable
   select(-Datum)
 
-
 unemp_clean <- unemp %>%
   # Here, we transform the date variable to fit the previous data set.
   separate(month, into = c("Monat_Text", "Jahr"), sep = " ") %>%
@@ -53,11 +52,25 @@ unemp_clean <- unemp %>%
     .default = NA_character_
   )) %>%
   mutate(date = as.Date(paste(Jahr, Monat_Zahl, "01", sep = "-"))) %>%
-  select(-Monat_Text, -Jahr, -Monat_Zahl)
+  select(-Monat_Text, -Jahr, -Monat_Zahl) %>%
+  filter(date >= "2017-01-01")
 
-# The bip data set is already clean, so we can add it directly to the processed data folder.
-# The allbus_mini data set was already cleaned in code 02, so we can also add it to the processed data folder
+bip_clean <- bip %>%
+  # We choose december 31st as our date, because the gdp numbers of a year of course represent the year that is coming to an end.
+  mutate(date = make_date(year = year, month = 12, day = 31)) %>%
+  select(-year) %>%
+  filter(date >= "2016-12-31") %>%
+  filter(date <= "2026-12-31")
+
+allbus_mini_raw <- read_dta(here("data", "raw", "allbus_mini.dta"))
+
+allbus_mini_clean <- allbus_mini_raw %>%
+  # Again, we choose december 31st as the date for all allbus observations from a year.
+  mutate(date = make_date(year = year, month = 12, day = 31)) %>%
+  filter(year > 2016)
+
+write_csv(allbus_mini_clean, here("data", "processed", "allbus_mini_clean.dta"))
 write_csv(elect_clean, here("data", "processed", "elect_clean.csv"))
 write_csv(unemp_clean, here("data", "processed", "unemp_clean.csv"))
-write_csv(bip, here("data", "processed", "bip_clean.csv"))
+write_csv(bip_clean, here("data", "processed", "bip_clean.csv"))
 ## message("Wrote data/processed/data_clean.csv")

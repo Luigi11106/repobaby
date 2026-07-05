@@ -122,6 +122,12 @@ As of now we will use following packages in our project:
 
 -   glue
 
+-   readr
+
+-   lubridate
+
+-   withr
+
 If we don't actively encounter version incompatibility problems, we will probably not use package version locks as we're assuming that package versions are generally backwards compatible.
 
 ### Git workflow
