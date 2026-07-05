@@ -5,7 +5,9 @@
 library(tidyverse)
 library(here)
 
-data <- read_csv(here("data", "processed", "data_clean.csv"))
+##data <- read_csv(here("data", "processed", "data_clean.csv"))
 
 # TODO: add EDA plots and summaries
-glimpse(data)
+##glimpse(data)
+
+elect_clean %>% ggplot(aes(x = Datum, y = AfD)) + geom_path()

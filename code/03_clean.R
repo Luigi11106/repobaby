@@ -3,12 +3,61 @@
 
 library(tidyverse)
 library(here)
+library(lubridate)
+library(withr)
 
-raw <- read_csv(here("data", "raw", "data.csv"))
+elect_raw <- read_csv(here("data", "raw", "election_survey.csv"))
 
-cleaned <- raw |>
-  # TODO: add cleaning steps
-  identity()
+elect_clean <- elect_raw %>%
+  # First, we create a new date variable with the correct data type.
+  mutate(date = as.Date(Datum, format = "%d.%m.%Y")) %>%
+  # Then, we standardize the names of the columns.
+  rename(cdu_csu = `CDU/CSU`) %>%
+  rename(spd = SPD) %>%
+  rename(gruene = Grüne) %>%
+  rename(afd = AfD) %>%
+  rename(fdp = FDP) %>%
+  rename(linke = Linke) %>%
+  rename(bsw = BSW) %>%
+  rename(freie_waehler = `Freie Wähler`) %>%
+  # Then, we transform the values into percentages
+  mutate(cdu_csu = cdu_csu / 10) %>%
+  mutate(spd = spd / 10) %>%
+  mutate(gruene = gruene / 10) %>%
+  mutate(afd = afd / 10) %>%
+  mutate(fdp = fdp / 10) %>%
+  mutate(linke = linke / 10) %>%
+  mutate(bsw = bsw / 10) %>%
+  mutate(freie_waehler = freie_waehler / 10) %>%
+  # Finally, we remove the previous date variable
+  select(-Datum)
 
-write_csv(cleaned, here("data", "processed", "data_clean.csv"))
-message("Wrote data/processed/data_clean.csv")
+
+unemp_clean <- unemp %>%
+  # Here, we transform the date variable to fit the previous data set.
+  separate(month, into = c("Monat_Text", "Jahr"), sep = " ") %>%
+  mutate(Monat_Zahl = case_match(
+    Monat_Text,
+    "Januar" ~ "01", "Jan" ~ "01",
+    "Februar" ~ "02", "Feb" ~ "02",
+    "März" ~ "03", "Mär" ~ "03",
+    "April" ~ "04", "Apr" ~ "04",
+    "Mai" ~ "05",
+    "Juni" ~ "06", "Jun" ~ "06",
+    "Juli" ~ "07", "Jul" ~ "07",
+    "August" ~ "08", "Aug" ~ "08",
+    "September" ~ "09", "Sep" ~ "09",
+    "Oktober" ~ "10", "Okt" ~ "10",
+    "November" ~ "11", "Nov" ~ "11",
+    "Dezember" ~ "12", "Dez" ~ "12",
+    .default = NA_character_
+  )) %>%
+  mutate(date = as.Date(paste(Jahr, Monat_Zahl, "01", sep = "-"))) %>%
+  select(-Monat_Text, -Jahr, -Monat_Zahl)
+
+# The bip data set is already clean, so we can add it directly to the processed data folder.
+# The allbus_mini data set was already cleaned in code 02, so we can also add it to the processed data folder
+write_csv(elect_clean, here("data", "processed", "elect_clean.csv"))
+write_csv(unemp_clean, here("data", "processed", "unemp_clean.csv"))
+write_csv(bip, here("data", "processed", "bip_clean.csv"))
+## message("Wrote data/processed/data_clean.csv")
