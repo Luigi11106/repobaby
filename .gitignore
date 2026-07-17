@@ -16,3 +16,6 @@ Thumbs.db
 data/raw/ZA8835*
 
 **/*.quarto_ipynb
+
+#plots
+plots/
