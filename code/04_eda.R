@@ -6,6 +6,7 @@ library(tidyverse)
 library(here)
 
 elect_clean <- read_csv(here("data", "processed", "elect_clean.csv"))
+bip_clean <- read_csv(here("data", "processed", "bip_clean.csv"))
 
 # TODO: add EDA plots and summaries
 glimpse(elect_clean)
