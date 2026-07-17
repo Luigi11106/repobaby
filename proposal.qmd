@@ -30,7 +30,7 @@ Pushed back: (2.  To what extent do the objective economic situation (net househ
 library(tidyverse)
 library(here)
 library(haven)
-allbus <- read_dta(here("data", "raw", "ZA5280_v2-1-0.dta", "ZA5280_v2-1-0.dta"))
+allbus <- read_dta(here("data", "raw", "allbus_mini.dta"))
 ```
 
 ```{r}
@@ -49,10 +49,28 @@ allbus %>%
     voting_intention = if_else(pv01 %in% c(1, 2, 3, 4, 6, 42, 90), 1, 0),
     voting_intention = as.factor(voting_intention)
   ) %>%
+  #ep01 as factor
+  mutate(ep01 = as.factor(ep01)) |> 
+  #recoded ep01
+  mutate(ep01 = recode(ep01, 
+                       "1" = "SEHR GUT",
+                       "2" = "GUT",
+                       "3" = "TEILS, TEILS",
+                       "4" = "SCHLECHT",
+                       "5" = "SEHR SCHLECHT")) |> 
   # we removed all unnecessary variables.
   select(ep01, pv01, voting_intention) %>%
   ggplot(aes(x = ep01, fill = voting_intention)) +
-  geom_bar(position = "fill")
+  geom_bar(position = "fill")+
+  #labels
+  labs(title = "Abstimmungsabsicht in Deutschland \n nach subjektiv wahrgenommener Wirtschaftslage",
+         x = "Subjektive wirtschafltiche Lage in DE heute",
+         y = "Prozent",
+         fill = "Abstimmungsabsicht")+
+  scale_fill_manual(values = c("red2", "cyan3"), labels = c("Nicht abstimmen", "Abstimmen"))+
+  theme(axis.text.x = element_text(angle = 45,
+                                   vjust = 1,
+                                   hjust = 1))
 ```
 
 As we can see, people with are more negative opinion on the economic situation in Germany are more likely to announce that they would not be voting.
@@ -60,7 +78,8 @@ As we can see, people with are more negative opinion on the economic situation i
 ```{r}
 allbus %>%
   group_by(pv01) %>%
-  summarise(n())
+  summarise("Anzahl Personen" = n()) |> 
+  rename("Wahlabsicht BTW (pv01)" = pv01)
 # Very quick overview on how people answered the voting intention question.
 ```
 
@@ -70,7 +89,11 @@ allbus %>%
   mutate(eastwest = as.factor(eastwest)) %>%
   ggplot(aes(x = ep01, fill = eastwest)) +
   geom_bar(position = "fill") +
-  labs(x = "Einordnung der Wirtschaftslage \n (1 = sehr gut, 5 = sehr schlecht)", y = "Ostdeutsche (blau) \n versus Westdeutsche (rot)")
+  labs(x = "Wirtschaftslage \n (1 = sehr gut, 5 = sehr schlecht)",
+       y = "Prozent",
+       fill = "Region",
+       title = "Einordnung der Wirtschaftslage in Deutschland")+
+  scale_fill_manual(labels = c("west", "ost"), values = c("red2", "cyan3"))
 ```
 
 As we can see here, East Germans are more likely to have a negative view on Germany's economic situation than West Germans.
