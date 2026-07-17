@@ -27,23 +27,21 @@ Source: https://search.gesis.org/research_data/ZA5280 License: Open Source
 ```{r}
 #| label: load-data
 library(tidyverse)
-library(here)
-library(haven)
-allbus <- read_dta(here("data", "raw", "allbus_mini.dta"))
+allbus_mini_clean
 ```
 
 ```{r}
 # First plot.
 
 # Initial sorting of the column names, so we can find the proper variables easier.
-alphabetic_allbus <- allbus[, order(colnames(allbus))]
-allbus %>%
+alph_allbus_mini_clean <- allbus_mini_clean[, order(colnames(allbus_mini_clean))]
+alph_allbus_mini_clean %>%
   # Filtering only proper values for the ep01 variable. (personal economic evaluation)
   filter(ep01 %in% c(1, 2, 3, 4, 5)) %>%
   # Filtering only the proper values for the pv01 variable. (voting intention)
-  # we removed don't know, no answer, answer rejected and not eligible to vote.
+  # we remove don't know, no answer, answer rejected and not eligible to vote.
   filter(pv01 %in% c(1, 2, 3, 4, 6, 42, 90, 91)) %>%
-  # we created our own voting variable and made it able to compute expected turnout.
+  # we create our own voting variable and make it able to compute expected turnout.
   mutate(
     voting_intention = if_else(pv01 %in% c(1, 2, 3, 4, 6, 42, 90), 1, 0),
     voting_intention = as.factor(voting_intention)
@@ -52,21 +50,22 @@ allbus %>%
   mutate(ep01 = as.factor(ep01)) |> 
   #recoded ep01
   mutate(ep01 = recode(ep01, 
-                       "1" = "SEHR GUT",
-                       "2" = "GUT",
-                       "3" = "TEILS, TEILS",
-                       "4" = "SCHLECHT",
-                       "5" = "SEHR SCHLECHT")) |> 
-  # we removed all unnecessary variables.
-  select(ep01, pv01, voting_intention) %>%
-  ggplot(aes(x = ep01, fill = voting_intention)) +
+                       "1" = "Very good",
+                       "2" = "Good",
+                       "3" = "Medium",
+                       "4" = "Bad",
+                       "5" = "Very bad")) |> 
+  # we remove all unnecessary variables, but keeping the weight is very important.
+  select(ep01, pv01, voting_intention, wghtpew) %>%
+  # We can now plot the weighted result.
+  ggplot(aes(x = ep01, fill = voting_intention, weight = wghtpew)) +
   geom_bar(position = "fill")+
-  #labels
-  labs(title = "Abstimmungsabsicht in Deutschland \n nach subjektiv wahrgenommener Wirtschaftslage",
-         x = "Subjektive wirtschafltiche Lage in DE heute",
-         y = "Prozent",
-         fill = "Abstimmungsabsicht")+
-  scale_fill_manual(values = c("red2", "cyan3"), labels = c("Nicht abstimmen", "Abstimmen"))+
+  # labels.
+  labs(title = "Voting intention in Germany \nby subjective economic satisfaction",
+         x = "economic satisfaction",
+         y = "",
+         fill = "Voting intention")+
+  scale_fill_manual(values = c("red2", "cyan3"), labels = c("Will not vote", "Will vote"))+
   theme(axis.text.x = element_text(angle = 45,
                                    vjust = 1,
                                    hjust = 1))
@@ -75,24 +74,24 @@ allbus %>%
 As we can see, people with are more negative opinion on the economic situation in Germany are more likely to announce that they would not be voting.
 
 ```{r}
-allbus %>%
+alph_allbus_mini_clean %>%
   group_by(pv01) %>%
-  summarise("Anzahl Personen" = n()) |> 
-  rename("Wahlabsicht BTW (pv01)" = pv01)
+  summarise("Total amount" = n()) |> 
+  rename("Voting intention" = pv01)
 # Very quick overview on how people answered the voting intention question.
 ```
 
 ```{r}
-allbus %>%
+alph_allbus_mini_clean %>%
   filter(ep01 %in% c(1, 2, 3, 4, 5)) %>%
   mutate(eastwest = as.factor(eastwest)) %>%
-  ggplot(aes(x = ep01, fill = eastwest)) +
+  ggplot(aes(x = ep01, fill = eastwest, weight = wghtpew)) +
   geom_bar(position = "fill") +
-  labs(x = "Wirtschaftslage \n (1 = sehr gut, 5 = sehr schlecht)",
-       y = "Prozent",
+  labs(x = "Economy \n (1 = very good, 5 = very bad)",
+       y = "",
        fill = "Region",
-       title = "Einordnung der Wirtschaftslage in Deutschland")+
-  scale_fill_manual(labels = c("west", "ost"), values = c("red2", "cyan3"))
+       title = "Subjective economic satisfaction in Germany")+
+  scale_fill_manual(labels = c("west", "east"), values = c("red2", "cyan3"))
 ```
 
 As we can see here, East Germans are more likely to have a negative view on Germany's economic situation than West Germans.
@@ -101,28 +100,28 @@ As we can see here, East Germans are more likely to have a negative view on Germ
 
 1.  Research question
 
-- Data basis: ALLBUS 1980-2023, linking macroeconomic time series (Destatis GDP growth) covering the election year.
-- Descriptive: Frequency distributions of the DVs, means/SDs of the IV across election years, cross-tabulations of region × voting behavior.
-- Bivariate: Correlations between GDP growth and aggregated voter turnout/governing-party vote and the change compared to the previous election cycle; chi² tests for categorical control variables.
-- Multivariate:
-  - Logistic regression 1: Voter turnout \~ GDP growth + control variables
-  - Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
-- Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
+-   Data basis: ALLBUS 1980-2023, linking macroeconomic time series (Destatis GDP growth) covering the election year.
+-   Descriptive: Frequency distributions of the DVs, means/SDs of the IV across election years, cross-tabulations of region × voting behavior.
+-   Bivariate: Correlations between GDP growth and aggregated voter turnout/governing-party vote and the change compared to the previous election cycle; chi² tests for categorical control variables.
+-   Multivariate:
+    -   Logistic regression 1: Voter turnout \~ GDP growth + control variables
+    -   Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
+-   Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
 
-2.  Question
+2.  Question (if need be)
 
-- Data basis: ALLBUS 2021
-- Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
-- Bivariate:
-  - Correlation income ↔ support for redistribution (expected: negative)
-  - Correlation expectation ↔ support for redistribution (expected: more pessimistic expectation → higher support)
-  - Multivariate — hierarchical linear regression:
-  - Model 1: DV \~ control variables
-  - Model 2: + IV1 (objective income)
-  - Model 3: + IV2 (subjective expectation)
-  - Comparison of ΔR² → which block explains more variance
-- Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
-- Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
+-   Data basis: ALLBUS 2021
+-   Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
+-   Bivariate:
+    -   Correlation income ↔ support for redistribution (expected: negative)
+    -   Correlation expectation ↔ support for redistribution (expected: more pessimistic expectation → higher support)
+    -   Multivariate — hierarchical linear regression:
+    -   Model 1: DV \~ control variables
+    -   Model 2: + IV1 (objective income)
+    -   Model 3: + IV2 (subjective expectation)
+    -   Comparison of ΔR² → which block explains more variance
+-   Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
+-   Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
 
 ## Workflow organisation
 
@@ -134,21 +133,21 @@ We will follow the Tidyverse Style Guide. Code formatting will be handled using 
 
 As of now we will use following packages in our project:
 
-- tidyverse
+-   tidyverse
 
-- here
+-   here
 
-- haven
+-   haven
 
-- janitor
+-   janitor
 
-- glue
+-   glue
 
-- readr
+-   readr
 
-- lubridate
+-   lubridate
 
-- withr
+-   withr
 
 If we don't actively encounter version incompatibility problems, we will probably not use package version locks as we're assuming that package versions are generally backwards compatible.
 
@@ -163,3 +162,7 @@ We follow a feature-based branching strategy, where each step or logically relat
 What we will exclude from git is user specific data, because it is irrelevant for others and potentially private, as well as build artefacts and OS noise, as it is irrelevant to others as well.
 
 What we will not exclude is all relevant working data, informational files, as well as environmental files.
+
+### Weights
+
+If we need to make graphics that are supposed to be represent Germany accurately, we will use the adequate weighting variable from the data set (I.e. wghtpew from allbus). Other data sets like the polling from dawum already use their own weights and provide the weighted means in their polling numbers.
