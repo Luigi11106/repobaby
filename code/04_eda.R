@@ -53,3 +53,5 @@ ggplot() +
 # Recession: Interestingly, Right after the publication of the recessive 2024 numbers, the AfD numbers drop again.
 # Hovering around the 0: The economy very slowly works its way out of the recession, while AFD polling now grows slower, but with barely any interuption
 # Alltogether: Link between weak economy and strong AfD looks stronger after Covid.
+
+
