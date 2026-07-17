@@ -3,6 +3,7 @@
 # Run once; data/raw/ is read-only after this point.
 
 library(here)
+library(readr)
 
 bip <- read_csv2(
   file = here("data", "raw", "bip.csv"),
@@ -23,5 +24,6 @@ unemp <- read_csv2(
   n_max = 229
 )
 
+elect_raw <- read.csv(here("data", "raw", "election_survey.csv"))
 
 message("Raw data already present — delete data/raw/ and re-run to refresh.")
