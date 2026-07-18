@@ -4,27 +4,32 @@
 
 <!-- Fill in after the project is complete. -->
 
-**[Name]** — [files/sections responsible for]
-- [Key task 1]
-- [Key task 2]
-- [Collaborative tasks]
+### Luis Baumgartner 
+- x
+- y
+- z
 
-**[Name]** — [files/sections responsible for]
-- [Key task 1]
-- [Key task 2]
-- [Collaborative tasks]
+### Paul
+- x
+- y
+- z
 
-**[Name]** — [files/sections responsible for]
-- [Key task 1]
-- [Key task 2]
-- [Collaborative tasks]
+### Luca Friedel
+- x
+- y
+- z
 
-## AI Tool Disclosure
+### Colin Reck
+- x
+- y
+- z
 
-<!-- Complete per the department guidelines:
-     https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds -->
+ ## Disclosure of AI Tool's 
 
-We used the following AI tools in this project:
+Department guidelines:
+https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds
+
+Following AI tools were used in this project:
 
 | Tool | Purpose | Scope |
 |------|---------|-------|
