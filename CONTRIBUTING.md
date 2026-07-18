@@ -1,8 +1,5 @@
 ---
 
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 # Contributions
