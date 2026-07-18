@@ -1,6 +1,6 @@
 # Project Title
 
-> Replace this with a short description of your project and dataset.
+> This project investigates the relationship between AfD polling numbers and economic factors in Germany. Specifically, we examine whether GDP, unemployment, and individuals economic satisfaction are associated with support for the AfD by combining ALLBUS survey data with official economic statistics from German federal agencies.
 
 ## Research Questions
 
@@ -8,7 +8,7 @@
 
 ## Dataset
 
-- **Source:** <!-- URL or citation -->
+- **Source:** https://search.gesis.org/research_data/ZA8837
 - **Licence:** GESIS ToS
 - **Description:** The ALLBUS cumulative data set contains survey data from Germany, with key variables covering socio-demographics, political attitudes and social values.
 
@@ -26,8 +26,10 @@
 
 <!-- -->
 
-- **Source:** <!-- URL or citation -->
-- **Licence:** <!-- e.g. CC BY 4.0 -->
+- **Source:** https://statistik.arbeitsagentur.de/DE/Navigation/Statistiken/Interaktive-Statistiken/Zeitreihen/Lange-Zeitreihen-Nav.html?Fachstatistik%3Dalo%26DR
+_Gebietsstruktur%3Dd%26Gebiete_Region%3DDeutschland%26DR_Region%3Dd%26DR_Region
+_d%3Dd%26DR_RK%3Dinsg%26mapHadSelection%3Dfalse%26toggleswitch_saison%3D0
+- **Licence:** (dl-de/by-2-0)
 - **Description:** Unemployment data Germany since 2007
 
 ## Group Members
