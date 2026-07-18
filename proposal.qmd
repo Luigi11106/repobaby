@@ -27,8 +27,10 @@ Source: https://search.gesis.org/research_data/ZA5280 License: Open Source
 ```{r}
 #| label: load-data
 library(tidyverse)
-allbus_mini_clean
+
 ```
+
+To continue, please run 01, 02, and 03 in the code folder.
 
 ```{r}
 # First plot.
@@ -100,28 +102,28 @@ As we can see here, East Germans are more likely to have a negative view on Germ
 
 1.  Research question
 
--   Data basis: ALLBUS 1980-2023, linking macroeconomic time series (Destatis GDP growth) covering the election year.
--   Descriptive: Frequency distributions of the DVs, means/SDs of the IV across election years, cross-tabulations of region × voting behavior.
--   Bivariate: Correlations between GDP growth and aggregated voter turnout/governing-party vote and the change compared to the previous election cycle; chi² tests for categorical control variables.
--   Multivariate:
-    -   Logistic regression 1: Voter turnout \~ GDP growth + control variables
-    -   Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
--   Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
+- Data basis: ALLBUS 1980-2023, linking macroeconomic time series (Destatis GDP growth) covering the election year.
+- Descriptive: Frequency distributions of the DVs, means/SDs of the IV across election years, cross-tabulations of region × voting behavior.
+- Bivariate: Correlations between GDP growth and aggregated voter turnout/governing-party vote and the change compared to the previous election cycle; chi² tests for categorical control variables.
+- Multivariate:
+  - Logistic regression 1: Voter turnout \~ GDP growth + control variables
+  - Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
+- Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
 
 2.  Question (if need be)
 
--   Data basis: ALLBUS 2021
--   Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
--   Bivariate:
-    -   Correlation income ↔ support for redistribution (expected: negative)
-    -   Correlation expectation ↔ support for redistribution (expected: more pessimistic expectation → higher support)
-    -   Multivariate — hierarchical linear regression:
-    -   Model 1: DV \~ control variables
-    -   Model 2: + IV1 (objective income)
-    -   Model 3: + IV2 (subjective expectation)
-    -   Comparison of ΔR² → which block explains more variance
--   Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
--   Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
+- Data basis: ALLBUS 2021
+- Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
+- Bivariate:
+  - Correlation income ↔ support for redistribution (expected: negative)
+  - Correlation expectation ↔ support for redistribution (expected: more pessimistic expectation → higher support)
+  - Multivariate — hierarchical linear regression:
+  - Model 1: DV \~ control variables
+  - Model 2: + IV1 (objective income)
+  - Model 3: + IV2 (subjective expectation)
+  - Comparison of ΔR² → which block explains more variance
+- Interaction: Income × expectation, to test whether, for instance, high-income but pessimistic individuals become particularly supportive of redistribution ("fear of falling" hypothesis).
+- Robustness: Sensitivity analysis with log-transformed income; separate estimations for East/West.
 
 ## Workflow organisation
 
@@ -133,21 +135,21 @@ We will follow the Tidyverse Style Guide. Code formatting will be handled using 
 
 As of now we will use following packages in our project:
 
--   tidyverse
+- tidyverse
 
--   here
+- here
 
--   haven
+- haven
 
--   janitor
+- janitor
 
--   glue
+- glue
 
--   readr
+- readr
 
--   lubridate
+- lubridate
 
--   withr
+- withr
 
 If we don't actively encounter version incompatibility problems, we will probably not use package version locks as we're assuming that package versions are generally backwards compatible.
 
