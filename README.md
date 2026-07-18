@@ -1,4 +1,4 @@
-# Project Title
+# The Relationship Between Economic Conditions and AfD Support in Germany
 
 > This project investigates the relationship between AfD polling numbers and economic factors in Germany. Specifically, we examine whether GDP, unemployment, and individuals economic satisfaction are associated with support for the AfD by combining ALLBUS survey data with official economic statistics from German federal agencies.
 
