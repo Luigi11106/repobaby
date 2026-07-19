@@ -9,7 +9,7 @@
 - y
 - z
 
-### Paul
+### Paul Petras
 - x
 - y
 - z
