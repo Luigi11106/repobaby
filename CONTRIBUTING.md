@@ -11,28 +11,31 @@ Most of the files were edited by more than one team member, because we took turn
 Especially in the beginning, most of the coding was done via team call, so only one memberof the team wrote.
 
 **\[Luis Baumgartner\]** 
-— \[files/sections responsible for\] 
-- \[Key task 1\] 
-- \[Key task 2\] 
-- \[Collaborative tasks\]
+— \[01_download.R, 02_prepare_allbus_dataset.R, 03_clean.R, CONTRIBUTING.md\] 
+- \[Licence research\] 
+- \[Weighting variable research\] 
+- \[Data download & Cleaning\]
+- \[Keeping the index updated\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 **\[Colin Reck\]** 
 — \[files/sections responsible for\] 
 - \[Key task 1\] 
 - \[Key task 2\] 
-- \[Collaborative tasks\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 **\[Luca Friedel\]** 
-— \[files/sections responsible for\] 
-- \[Key task 1\] 
+— \[04_EDA.R, README.md\] 
+- \[Data plotting & modeling\] 
 - \[Key task 2\] 
-- \[Collaborative tasks\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 **\[Paul Petras\]** 
-— \[files/sections responsible for\] 
-- \[Key task 1\] 
-- \[Key task 2\] 
-- \[Collaborative tasks\]
+— \[05_analysis\] 
+- \[Technical Expertise\] 
+- \[Workflow Organization\] 
+- \[Initial setup\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 ## AI Tool Disclosure
 
