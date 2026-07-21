@@ -12,7 +12,7 @@ Especially in the beginning, most of the coding was done via team call, so only 
 
 **\[Luis Baumgartner\]** 
 — \[01_download.R, 02_prepare_allbus_dataset.R, 03_clean.R, CONTRIBUTING.md\] 
-- \[Licence research\] 
+- \[Coordination\] 
 - \[Weighting variable research\] 
 - \[Data download & Cleaning\]
 - \[Keeping the index updated\]
