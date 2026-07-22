@@ -166,4 +166,4 @@ What we will not exclude is all relevant working data, informational files, as w
 
 ### Weights
 
-If we need to make graphics that are supposed to be represent Germany accurately, we will use the adequate weighting variable from the data set (I.e. wghtpew from allbus). Other data sets like the polling from dawum already use their own weights and provide the weighted means in their polling numbers.
+If we need to make graphics that are supposed to be represent Germany accurately, we will use the adequate weighting variable from the data set (I.e. wghtptew from allbus). Other data sets like the polling from dawum already use their own weights and provide the weighted means in their polling numbers.

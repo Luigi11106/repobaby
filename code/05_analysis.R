@@ -132,7 +132,7 @@ ggsave(filename = here("plots", "UNEMPLOYMENT_AFD.png"))
 ep01_wght <- allbus_mini_raw |>
   filter(!(ep01 %in% c(-42, -11, -9, -8, -1))) |>
   group_by(year) |>
-  summarise(ep01_mean = weighted.mean(ep01, w = wghtpew, na.rm = TRUE)) |>
+  summarise(ep01_mean = weighted.mean(ep01, w = wghtptew, na.rm = TRUE)) |>
   filter(year > 2014)
 
 # afd polling numbers mean per year
