@@ -19,9 +19,9 @@ Especially in the beginning, most of the coding was done via team call, so only 
 - Collaborative: Creating & Updating the proposal.qmd file
 
 **Colin Reck** 
-— files/sections responsible for 
-- Key task 1
-- Key task 2
+— findings.md, 05_analysis
+- Qualitative analysis
+- Research design & research questions
 - Collaborative: Creating & Updating the proposal.qmd file
 
 **Luca Friedel** 
