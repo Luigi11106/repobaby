@@ -113,20 +113,22 @@ Using the World Bank data or the allbus data?
 
 ## LLM usage
 
+### Usage 1: License checkup
+
+-   Google Gemini
+-   Own suggestions what licenses were correct
 -   Telling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.
 
+### Usage 2: allbus issue consultation
+
+-   Google Gemini
+-   Solution suggestions
 -   Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.
 
+### Usage 3: Git issues / conflict resolution
+
+-   Google Gemini
+
+-   Helpful git commands
+
 -   When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.
-
-### Usage 1: \[task\]
-
--   **Tool / model:**
--   **What it produced:**
--   **What we had to correct or verify:**
-
-### Usage 2: \[task\]
-
--   **Tool / model:**
--   **What it produced:**
--   **What we had to correct or verify:**
