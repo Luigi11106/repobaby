@@ -1,7 +1,3 @@
----
-
----
-
 # Contributions
 
 ## Group Members
@@ -31,16 +27,12 @@ Especially in the beginning, most of the coding was done via team call, so only 
 - Collaborative: Creating & Updating the proposal.qmd file
 
 **Paul Petras** 
-— 05_analysis
-- Technical Expertise
-- Workflow Organization 
 - Initial setup
+- Workflow Organization 
+- Technical Expertise
+— 04_eda
 - Collaborative: Creating & Updating the proposal.qmd file
 
-```{=html}
-<!-- Complete per the department guidelines:
-     https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds -->
-```
  ## Disclosure of AI Tool's 
 
 Department guidelines:
