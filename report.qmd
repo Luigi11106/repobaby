@@ -10,8 +10,8 @@ library(tidyverse)
 library(here)
 library(haven)
 
-allbus_mini_raw <- 
-elect_clean <- read_csv(here("data", "processed", "elect_clean.csv"))
+allbus_mini_raw <-
+  elect_clean <- read_csv(here("data", "processed", "elect_clean.csv"))
 unemp <- read_csv(here("data", "processed", "unemp_clean.csv"))
 allbus_mini_clean <- read_dta(here("data", "processed", "allbus_mini_clean.dta"))
 bip_clean <- read_csv(here("data", "processed", "bip_clean.csv"))
@@ -39,7 +39,7 @@ A commonly discussed explanation is the role of economic conditions. Economic un
 
 ```{r}
 elect_clean %>% ggplot(aes(x = date, y = afd)) +
-  geom_path()+
+  geom_path() +
   labs(title = "AfD support in Germany")
 ```
 
@@ -48,10 +48,10 @@ This plot shows the vote share of the AfD in Germany over the years.
 AfD support declined in 2017 before recovering later that year. Between 2018 and 2020, polling numbers remained largely stable. Support fell again during the COVID-19 pandemic, followed by a sharp increase in 2022 and 2023. After a decline in 2024, polling support has gradually increased again.
 
 ```{r}
-unemp |> 
-  ggplot(aes(unemployment_rate))+
-  geom_histogram(binwidth = 0.25, fill = "forestgreen", color = "black")+
-  labs(title = "Histogramm of enemployment in percent in Germany 2007 - 2026")+
+unemp |>
+  ggplot(aes(unemployment_rate)) +
+  geom_histogram(binwidth = 0.25, fill = "forestgreen", color = "black") +
+  labs(title = "Histogramm of enemployment in percent in Germany 2007 - 2026") +
   theme_minimal()
 ```
 
@@ -96,7 +96,6 @@ ggplot() +
     axis.text.y.right = element_text(color = "red")
   ) +
   labs(title = "Afd polling numbers compared to real GDP growth\n in Germany 2017 - 2026")
-
 ```
 
 This plot illustrates the relationship between AfD polling and the real GDP growth in Germany from 2017 up until 2026. In the pre-COVID-19 era, both GDP growth and the AfD's popularity had remained quite steady. However, during the pandemic, the GDP took a hit but the AfD remained steady, which indicates that the party was not able to use the pandemic-induced downturn in the economy to its advantage. The period of post-lockdown economic recovery had witnessed jump GDP whereas the support for AfD remained stagnant. When the economy began its period of stagnation, the AfD support soared, indicating an inverse connection between its popularity and economic performance.
@@ -142,7 +141,6 @@ ggplot() +
     axis.text.y.right = element_text(color = "red")
   ) +
   labs(title = "Afd polling numbers compared to unemployment rate\n in Germany 2017 - 2026")
-
 ```
 
 In this plot AfD approval rating is being compared with unemployment in Germany from 2017 until 2026. Unemployment falls before the Covid-19 pandemic. However, AfD rating is constant during that time. In the course of the pandemic, the level of unemployment rose, but the rating of AfD was quite low. Since 2022, both unemployment and AfD started increasing although the increase is much more pronounced with the AfD.
@@ -152,11 +150,9 @@ In general, it seems that the periods of unemployment rises may correspond with 
 ## 4.3 View on the economy
 
 ```{r}
-
-
-allbus_mini_clean_inverse <- allbus_mini_clean |> 
+allbus_mini_clean_inverse <- allbus_mini_clean |>
   filter(!(ep01 %in% c(-42, -11, -9, -8, -1))) |>
-  mutate(ep01 = 6- ep01)
+  mutate(ep01 = 6 - ep01)
 
 ep01_wght <- allbus_mini_clean_inverse |>
   filter(!(ep01 %in% c(-42, -11, -9, -8, -1))) |>
@@ -223,7 +219,6 @@ ggplot() +
     axis.text.y.right = element_text(color = "red")
   ) +
   labs(title = "Afd polling numbers compared to economic satisfaction\n in Germany 2017 - 2026")
-
 ```
 
 This plot compares AfD polling support with average satisfaction with the economic situation in Germany between 2018 and 2023. Overall, satisfaction with the economy decreased slightly over the observation period, falling from an average of around 4.0 in 2018 to approximately 3.0 in 2023. During the same period, AfD polling support remained relatively stable until 2022 before increasing sharply from 2023 onwards.
