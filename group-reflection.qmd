@@ -143,5 +143,5 @@ We used the exact strategy as proposed. Every section of tasks was done on its o
 
 ### Usage 4: Translation
 
--Chat GBT
--Translation help
+- Chat GBT
+- Translation help
