@@ -19,9 +19,9 @@ elect %>% ggplot(aes(x = date, y = afd)) +
 # AfD support declined in 2017 before recovering later that year. Between 2018 and 2020, polling numbers remained largely stable. Support fell again during the COVID-19 pandemic, followed by a sharp increase in 2022 and 2023. After a decline in 2024, polling support has gradually increased again.
 
 unemp |>
-  ggplot(aes(unemployment_rate)) +
-  geom_histogram(binwidth = 0.25, fill = "forestgreen", color = "black") +
-  labs(title = "Histogramm of enemployment in percent in Germany 2007 - 2026") +
+  ggplot(aes(x = date, y = unemployment_rate)) +
+  geom_line() +
+  labs(title = "Unemployment in percent in Germany 2017 - 2026") +
   theme_minimal()
 
 allbus %>%
