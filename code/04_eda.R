@@ -200,3 +200,19 @@ ggsave(filename = here("plots", "ECON_SATISFACTION_AFD.png"))
 # conclusion
 # limitation: ony 3 allbus rounds while afd exists
 # but trens is visible, worse economic situation correaltes to rising afd numbers
+
+library(ggplot2)
+library(viridis) # Für barrierefreie Farben
+
+allbus_mini_clean %>%
+  filter(ep01 > 0) %>%
+  ggplot(aes(x = year, y = ep01)) +
+  geom_bin2d(bins = 30) + # bins steuert die Rastergröße
+  scale_fill_viridis_c() + # Schöne Farbpalette
+  theme_minimal() +
+  labs(
+    title = "Heatmap von EP01 über die Jahre",
+    x = "Jahr",
+    y = "EP01",
+    fill = "Anzahl"
+  )
