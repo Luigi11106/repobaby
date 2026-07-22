@@ -9,7 +9,7 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ### Functions & refactoring (W2)
 
-*What we did:* We only created a function once (till now), because other repeating tasks werent suitable for functions.
+*What we did:* We only created a function once (till now), because other repeating tasks were not suitable for functions.
 
 *What worked well:* The one function we created works quite well (its a really simple one)
 
@@ -33,35 +33,35 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ### Quarto websites & collaborative coding (W5)
 
-*What we did:*
+*What we did:* We experimented with rendering our website and looked at early rendered outputs. This gave us feedback as to what parts of our repository structure worked and what did not.
 
-*What worked well:*
+*What worked well:* Editing the index in \_quarto.yml to give us the desired project structure was luckily very simple and allowed us to fix the structure very quickly.
 
-*What was hard:*
+*What was hard:* During rendering, we did run into conflicts, notably the allbus_mini data set, but we did eventually find the issues and made it work.
 
 ### R packages (W6)
 
-*What we did:*
+*What we did:* After an in-group discussion, we decided not to create a project-specific R package, because our goals did not require the use of complicated and manually generated functions.
 
-*What worked well:*
+*What worked well:* The in-group discussion went very quickly and we came to a fast agreement.
 
-*What was hard:*
+*What was hard:* This week, nothing really.
 
 ### Initial data analysis & data cleaning (W7)
 
-*What we did:*
+*What we did:* After choosing the cumulative allbus data set, we quickly ran into the problem of storage. The original file was over 160MB large and by far exceeded the limit GitHub allowed us to push (100MB). After an in-group discussion, as well as talking to the tutors, we manually filtered the large data set into topics that were relevant to the project and added a reproducible code to track exactly what we cut from the original file. The other files used in this project posed different problems. After the exhausting act of data download was completed, all data sets had to be cleaned next. This too was no easy task, especially creating a helpful time variable was at times complicated to create, because some data sets had strange encodings for the time variable. Other data sets did not follow common structural rules and treated the csv file like a spread sheet with strange subcategories in the middle of the table. Once all data sets were cleaned into a clean and acceptable format, working became much easier.
 
-*What worked well:*
+*What worked well:* Finding Open Source data sets about the topics we wanted to cover.
 
-*What was hard:*
+*What was hard:* Finding **acceptably structured** Open source data sets about the topics we wanted to cover.
 
 ### Reproducibility, open data & renv (W9)
 
-*What we did:*
+*What we did:* Like the individual R package, an in-group discussion lead to the conclusion that Renv was not sensible for the limited scale of our project. What we did have to to in this department is look up the licenses of the data sets we used. Some were easy to find, others were hidden under an enormous amount of layers on several websites. For future projects, we learned that license documentation should be done instantly once one decides to include a data set.
 
-*What worked well:*
+*What worked well:* Coming to unanimous decisions within the group.
 
-*What was hard:*
+*What was hard:* Finding the license for the German unemployment data covered behind a dozen windows on the website of the unemployment agency.
 
 ### Analysis & inference strategies (W10)
 
@@ -81,23 +81,31 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ## Key analytical decisions
 
-Describe 2–3 decisions that had a meaningful effect on your results or workflow.
+### Decision 1: World Bank or allbus?
 
-### Decision 1: \[short title\]
+-   In the beginning, we had the option to use either the data from the World Bank, or allbus.
 
-*What were we deciding between?*
+-   We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier, we thought.
 
-*How did we reason through it?*
+-   Note that at this point, we had not run into the problems the allbus data set would impose later down the line.
 
-*In hindsight, would we decide differently?*
+-   In hindsight, choosing the allbus data set probably caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.
 
-### Decision 2: \[short title\]
+### Decision 2: allbus 2021 or cumulative allbus?
 
-*What were we deciding between?*
+-   After deciding to go with the allbus data, we faced another decision.
 
-*How did we reason through it?*
+-   Only analysing one point in time makes it hard to form conclusions about anything.
 
-*In hindsight, would we decide differently?*
+-   We also realized we were completely missing time-variate variables.
+
+-   For this reason, we switched to the cumulative allbus data from 1980 to 2023
+
+-   After choosing the data, we would run into the problem with the size of the file, but the previous data was no longer an option because we were missing a time variable.
+
+### Decision 3: expand to multiple data sets?
+
+-   Realizing that only analyzing opinions without adding objective data would make the analysis between AfD-polling (by then we had agreed on what our dependent variable would be) and multiple factors weak, we decided to add the GDP and the unemployment data to the mix and strengthen our findings
 
 ## Workflow & collaboration
 
@@ -109,16 +117,22 @@ Describe 2–3 decisions that had a meaningful effect on your results or workflo
 
 ## LLM usage
 
-Describe up to 5 significant uses of an LLM tool during the project.
+### Usage 1: License checkup
 
-### Usage 1: \[task\]
+-   Google Gemini
+-   Own suggestions what licenses were correct
+-   Telling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.
 
-- **Tool / model:**
-- **What it produced:**
-- **What we had to correct or verify:**
+### Usage 2: allbus issue consultation
 
-### Usage 2: \[task\]
+-   Google Gemini
+-   Solution suggestions
+-   Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.
 
-- **Tool / model:**
-- **What it produced:**
-- **What we had to correct or verify:**
+### Usage 3: Git issues / conflict resolution
+
+-   Google Gemini
+
+-   Helpful git commands
+
+-   When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.
