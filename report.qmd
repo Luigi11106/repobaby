@@ -1,0 +1,53 @@
+---
+title: "Report"
+editor: visual
+bibliography: references.bib
+---
+
+```{r}
+library(tidyverse)
+library(here)
+library(haven)
+
+
+
+```
+
+# 1. Introduction
+
+Populist parties are gaining support around the globe and Germany is no exception. The Alternative für Deutschland (AfD) as a populist party, has expirienced a substantial increase in public support. This development is a serious problem for the german democracy. This raises questions about the contributing factors.
+
+A commonly discussed explanation is the role of economic conditions. Economic uncertainty, declining growth and unemployment are often cited factors. This project investigates if such a relationship is measurable, with GDP, economic uncertainty and unemployment.
+
+------------------------------------------------------------------------
+
+# 2. Research question
+
+> To what extent do economic fluctuations (measured by GDP, growth, or a decline in GDP) influence voting intention and the polling numbers of the AfD?
+
+------------------------------------------------------------------------
+
+# 3. Exploratory data analysis
+
+```{r}
+elect_clean %>% ggplot(aes(x = date, y = afd)) +
+  geom_path()+
+  labs(title = "AfD support in Germany")
+```
+
+This plot shows the vote share of the AfD in Germany over the years.
+
+```{r}
+unemp |> 
+  ggplot(aes(unemployment_rate))+
+  geom_histogram(binwidth = 0.5, fill = "forestgreen", color = "black")+
+  labs(title = "Histogramm of enemployment in percent in Germany 2007 - 2026")+
+  theme_minimal()
+```
+
+```{r}
+allbus_mini_clean %>%
+  group_by(ep01) %>%
+  summarise("Total amount" = n()) |>
+  rename("subjective state of the economy \n 1 = good 5 = bad" = ep01)
+```
