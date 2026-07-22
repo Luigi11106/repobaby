@@ -81,27 +81,31 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ## Key analytical decisions
 
-Describe 2–3 decisions that had a meaningful effect on your results or workflow.
-
-### Decision 1: \[short title\]
-
-Using the World Bank data or the allbus data?
+### Decision 1: World Bank or allbus?
 
 -   In the beginning, we had the option to use either the data from the World Bank, or allbus.
 
--   We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier we thought.
+-   We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier, we thought.
 
 -   Note that at this point, we had not run into the problems the allbus data set would impose later down the line.
 
--   In hindsight, choosing the allbus data set caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.
+-   In hindsight, choosing the allbus data set probably caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.
 
-### Decision 2: \[short title\]
+### Decision 2: allbus 2021 or cumulative allbus?
 
-*What were we deciding between?*
+-   After deciding to go with the allbus data, we faced another decision.
 
-*How did we reason through it?*
+-   Only analysing one point in time makes it hard to form conclusions about anything.
 
-*In hindsight, would we decide differently?*
+-   We also realized we were completely missing time-variate variables.
+
+-   For this reason, we switched to the cumulative allbus data from 1980 to 2023
+
+-   After choosing the data, we would run into the problem with the size of the file, but the previous data was no longer an option because we were missing a time variable.
+
+### Decision 3: expand to multiple data sets?
+
+-   Realizing that only analyzing opinions without adding objective data would make the analysis between AfD-polling (by then we had agreed on what our dependent variable would be) and multiple factors weak, we decided to add the GDP and the unemployment data to the mix and strengthen our findings
 
 ## Workflow & collaboration
 
