@@ -12,4 +12,3 @@ Taken together, the descriptive evidence points to a link between a weak economy
 
 writeLines(findings, here("docs", "findings.md"))
 message("Wrote docs/findings.md")
-
