@@ -10,5 +10,5 @@ Looking first at AfD polling in isolation, support followed a distinctly non-lin
 Setting these dynamics against real GDP growth reveals a relationship that appears to shift over time. In the pre-pandemic years, modest but steady economic growth was accompanied by broadly stable AfD support. During the early pandemic, polling and growth declined together, suggesting that the party did not benefit from the weakening economy in this phase; support likewise remained low through the post-lockdown recovery. The pattern changes from 2022 onward: as growth slowed into stagnation, AfD support rose sharply. Notably, support fell again shortly after the recessionary 2024 figures were published, before resuming its climb as the economy edged slowly out of recession.
 Taken together, the descriptive evidence points to a link between a weak economy and stronger AfD support that appears more pronounced in the post-COVID period than before it. We emphasise that these are exploratory observations based on the co-movement of the series; a formal statistical test is required to establish whether the association is robust once other factors are accounted for."
 
-writeLines(findings, here("docs", "findings.md"))
+writeLines(findings, here("findings.md"))
 message("Wrote docs/findings.md")
