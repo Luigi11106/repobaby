@@ -123,7 +123,7 @@
     "href": "group-reflection.html#llm-usage",
     "title": "Group Reflection",
     "section": "LLM usage",
-    "text": "LLM usage\n\nUsage 1: License checkup\n\nGoogle Gemini\nOwn suggestions what licenses were correct\nTelling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.\n\n\n\nUsage 2: allbus issue consultation\n\nGoogle Gemini\nSolution suggestions\nBesides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.\nUsage 3: Git issues / conflict resolution\nGoogle Gemini\nHelpful git commands\nWhen running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.\n\n\n\nUsage 4: Translation\n-Chat GBT -Translation help"
+    "text": "LLM usage\n\nUsage 1: License checkup\n\nGoogle Gemini\nOwn suggestions what licenses were correct\nTelling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.\n\n\n\nUsage 2: allbus issue consultation\n\nGoogle Gemini\nSolution suggestions\nBesides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.\nUsage 3: Git issues / conflict resolution\nGoogle Gemini\nHelpful git commands\nWhen running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.\n\n\n\nUsage 4: Translation\n\nChat GPT\nTranslation help"
   },
   {
     "objectID": "proposal.html",
