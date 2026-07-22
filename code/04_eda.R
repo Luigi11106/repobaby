@@ -8,7 +8,7 @@ library(haven)
 
 # function for calculating the scale factor for plots
 skalierung_berechnen <- function(dataset, variable) {
-  scale <- max(elect_clean$afd, na.rm = TRUE) / max(dataset[[variable]], na.rm = TRUE)
+  scale <- max(elect_clean$afd, na.rm = TRUE) / max(abs(dataset[[variable]]), na.rm = TRUE)
   return(scale)
 }
 
