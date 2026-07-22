@@ -7,7 +7,7 @@ author:
   - "Reck Colin"
 date: 2026-06-08
 format:
-  pdf:
+  html:
     toc: true
     number-sections: true
 ---
