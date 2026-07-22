@@ -65,19 +65,19 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ### Analysis & inference strategies (W10)
 
-*What we did:*
+*What we did:* Assembled four cleaned data sources, the federal election polling, real GDP growth, unemployment figures, and ALLBUS survey data. Began a descriptive analysis of AfD polling dynamics and their co-movement with macroeconomic indicators, with a formal regression model planned as the inferential next step.
 
-*What worked well:*
+*What worked well:* Standardising all datasets to a shared date variable made it straightforward to overlay series and read off relationships.
 
-*What was hard:*
+*What was hard:* Arranging the plots correctly.
 
 ### Communication & visualisation (W11)
 
-*What we did:*
+*What we did:* Built a dual-axis time-series plot overlaying AfD polling against real GDP growth, and wrote up the observed phases as a narrative findings section.
 
-*What worked well:*
+*What worked well:* The dual-axis plot made the shifting relationship between the economy and AfD support legible at a glance.
 
-*What was hard:*
+*What was hard:* Thinking process, what data was visually appealing and the process of arranging it in a understandable way.
 
 ## Key analytical decisions
 
@@ -132,7 +132,7 @@ We used the exact strategy as proposed. Every section of tasks was done on its o
 - Google Gemini
 - Solution suggestions
 - Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.
-
+- 
 ### Usage 3: Git issues / conflict resolution
 
 - Google Gemini
@@ -140,3 +140,8 @@ We used the exact strategy as proposed. Every section of tasks was done on its o
 - Helpful git commands
 
 - When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.
+
+### Usage 4: Translation
+
+-Chat GBT
+-Translation help
