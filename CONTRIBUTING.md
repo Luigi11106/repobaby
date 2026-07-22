@@ -37,14 +37,16 @@ Especially in the beginning, most of the coding was done via team call, so only 
 - \[Initial setup\]
 - \[Collaborative: Creating & Updating the proposal.qmd file\]
 
-## AI Tool Disclosure
-
 ```{=html}
 <!-- Complete per the department guidelines:
      https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds -->
 ```
+ ## Disclosure of AI Tool's 
 
-We used the following AI tools in this project:
+Department guidelines:
+https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds
+
+Following AI tools were used in this project:
 
 | Tool          | Purpose                     | Scope                                       |
 |---------------|-----------------------------|---------------------------------------------|

@@ -27,7 +27,9 @@ Source: https://search.gesis.org/research_data/ZA5280 License: Open Source
 ```{r}
 #| label: load-data
 library(tidyverse)
-
+library(here)
+library(haven)
+allbus <- read_dta(here("data", "raw", "allbus_mini.dta"))
 ```
 
 To continue, please run 01, 02, and 03 in the code folder.
@@ -110,7 +112,7 @@ As we can see here, East Germans are more likely to have a negative view on Germ
   - Logistic regression 2: Vote for governing party \~ GDP growth + control variables\
 - Robustness: Interaction effects (GDP × region; GDP × employment status) to test whether economic voting is context-dependent. -- Interpretation: Effect sizes (odds ratios, average marginal effects) rather than mere significance tests.
 
-2.  Question (if need be)
+2.  Question
 
 - Data basis: ALLBUS 2021
 - Descriptive: Distribution of the DV, income deciles, distribution of future expectations; separately for East/West.
