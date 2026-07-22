@@ -24,6 +24,13 @@ unemp |>
   labs(title = "Unemployment in percent in Germany 2017 - 2026") +
   theme_minimal()
 
+bip |>
+  ggplot(aes(x = date, y = gdp_real)) +
+  geom_line() +
+  labs(title = "GDP in Germany 2017 - 2026") +
+  theme_minimal() +
+  labs(x = "Year", y = "GDP in €")
+
 allbus %>%
   group_by(ep01) %>%
   summarise("Total amount" = n()) |>
