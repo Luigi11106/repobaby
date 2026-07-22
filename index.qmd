@@ -1,19 +1,24 @@
 ---
-title: "Project Title"
+title: "The Relationship Between Economic Conditions and AfD Support in Germany"
 author:
-  - "Group Member 1"
-  - "Group Member 2"
-  - "Group Member 3"
-date: today
+  - "Luis Baumgartner"
+  - "Colin Reck"
+  - "Luca Friedel"
+  - "Paul Petras"
+date: 2026-07-18
 ---
 
 ## Introduction
 
-<!-- Motivate the dataset and research questions. -->
+The rise of the AfD has sparked interest in understanding the factors that influence the support for right-wing/extreme parties. Economic reasons are often cited as key factors. This project tries to visualize the linkage between these two. 
+
+## Research Question
+
+To what extent do economic fluctuations (measured by GDP, growth, or a decline in GDP) influence voting intention and the polling numbers of the AfD?
 
 ## Data
 
-<!-- Brief description of the dataset. -->
+We use the ALLBUS Cumulative Data Set together with official economic statistics from German federal statistical agencies. The ALLBUS dataset was chosen because it provides reliable and nationally representative survey data for Germany, covering a wide range of socio-demographic characteristics, political attitudes, and opinions on social issues. To complement these survey data, we incorporate official statistics on GDP and unemployment.
 
 ## Results
 

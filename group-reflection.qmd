@@ -1,0 +1,124 @@
+---
+title: "Group Reflection"
+editor: visual
+---
+
+## Skills inventory
+
+For each skill area, describe what your group actually used it for. If you did not use a skill, say so and note why.
+
+### Functions & refactoring (W2)
+
+*What we did:* We only created a function once (till now), because other repeating tasks werent suitable for functions.
+
+*What worked well:* The one function we created works quite well (its a really simple one)
+
+*What would have been hard:* To create a function that generates our plots. Because our plots use little to no repeating data, a function would have required a large number of arguments as input. It was faster and easier to rewrite the short section that repeated once. The other problem was that we always used different data sets for each chart, which would have required even more arguments for the function. If we had found a dataset that contained all the necessary variables, we could have written a function
+
+### Debugging (W3)
+
+*What we did:* We wrote a significant portion of the code together during calls, where the four of us were able to quickly resolve most errors. Since we had (and still have) widely varying levels of prior knowledge, we were able to help each other effectively within the group. Otherwise, we tried to interpret R's error messages, using AI as a last resort to have the errors explained to us. This allowed us to fix all the errors independently without having to blindly copy code from the AI.
+
+*What worked well:* Helping each other within the group
+
+*What was hard:*
+
+### Version control & remotes (W4)
+
+*What we did:* We frequently created new branches so that we could all work on different aspects of the project simultaneously. Either a branch was worked on by only one person at a time, or—if multiple people were working on the same branch—we clearly communicated beforehand who was allowed to edit which file to avoid conflicts. Thanks to version control, we could always revert to an earlier state, though we haven't needed to do so (so far). GitHub also ensured that everyone was notified whenever someone else completed a task. About halfway through the project, we adopted a workflow that worked well for everyone: we would call each other at midday to discuss what needed to be done. Afterward, tasks were assigned, and everyone worked on their respective parts, uploading their work once finished. In this way, we worked our way toward completion step by step.
+
+*What worked well:* We started by coding together via a call. Later, we coordinated together, followed by individual coding. Thanks to Git, there were no version conflicts.
+
+*What was hard:* Establishing our system. In the beginning, changes were sometimes made directly to the main branch; due to unclear communication and a failure to create separate branches, people would edit the same file simultaneously, leading to conflicts that could have easily been avoided.
+
+### Quarto websites & collaborative coding (W5)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+### R packages (W6)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+### Initial data analysis & data cleaning (W7)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+### Reproducibility, open data & renv (W9)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+### Analysis & inference strategies (W10)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+### Communication & visualisation (W11)
+
+*What we did:*
+
+*What worked well:*
+
+*What was hard:*
+
+## Key analytical decisions
+
+Describe 2–3 decisions that had a meaningful effect on your results or workflow.
+
+### Decision 1: \[short title\]
+
+*What were we deciding between?*
+
+*How did we reason through it?*
+
+*In hindsight, would we decide differently?*
+
+### Decision 2: \[short title\]
+
+*What were we deciding between?*
+
+*How did we reason through it?*
+
+*In hindsight, would we decide differently?*
+
+## Workflow & collaboration
+
+*How did we divide work across group members?*
+
+*What branching or Git workflow did we actually use — and did it match the proposal?*
+
+*What would we change about how we coordinated?*
+
+## LLM usage
+
+Describe up to 5 significant uses of an LLM tool during the project.
+
+### Usage 1: \[task\]
+
+- **Tool / model:**
+- **What it produced:**
+- **What we had to correct or verify:**
+
+### Usage 2: \[task\]
+
+- **Tool / model:**
+- **What it produced:**
+- **What we had to correct or verify:**

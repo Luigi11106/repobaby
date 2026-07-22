@@ -1,29 +1,46 @@
+---
+
+---
+
 # Contributions
 
 ## Group Members
 
-<!-- Fill in after the project is complete. -->
+Disclaimer:
+Most of the files were edited by more than one team member, because we took turn in editing certain parts.
+Especially in the beginning, most of the coding was done via team call, so only one memberof the team wrote.
 
-### Luis Baumgartner 
-- x
-- y
-- z
+**\[Luis Baumgartner\]** 
+— \[01_download.R, 02_prepare_allbus_dataset.R, 03_clean.R, CONTRIBUTING.md\] 
+- \[Coordination\] 
+- \[Weighting variable research\] 
+- \[Data download & Cleaning\]
+- \[Keeping the index updated\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
-### Paul Petras
-- x
-- y
-- z
+**\[Colin Reck\]** 
+— \[files/sections responsible for\] 
+- \[Key task 1\] 
+- \[Key task 2\] 
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
-### Luca Friedel
-- x
-- y
-- z
+**\[Luca Friedel\]** 
+— \[04_EDA.R, README.md\] 
+- \[Data plotting & modeling\] 
+- \[Key task 2\] 
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
-### Colin Reck
-- x
-- y
-- z
+**\[Paul Petras\]** 
+— \[05_analysis\] 
+- \[Technical Expertise\] 
+- \[Workflow Organization\] 
+- \[Initial setup\]
+- \[Collaborative: Creating & Updating the proposal.qmd file\]
 
+```{=html}
+<!-- Complete per the department guidelines:
+     https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds -->
+```
  ## Disclosure of AI Tool's 
 
 Department guidelines:
@@ -31,8 +48,8 @@ https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds
 
 Following AI tools were used in this project:
 
-| Tool | Purpose | Scope |
-|------|---------|-------|
-|      |         |       |
+| Tool          | Purpose                     | Scope                                       |
+|---------------|-----------------------------|---------------------------------------------|
+|ChatGPT        |Spell checking, proofreading |Texts, that are not the analysis of the data |
 
 All AI-generated code and text was reviewed and verified by a group member before inclusion.
