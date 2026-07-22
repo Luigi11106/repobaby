@@ -4,7 +4,7 @@ editor: visual
 bibliography: references.bib
 ---
 
-```{r}
+```{r warning=FALSE}
 #| message: false
 library(tidyverse)
 library(here)
@@ -49,9 +49,9 @@ AfD support declined in 2017 before recovering later that year. Between 2018 and
 
 ```{r}
 unemp |>
-  ggplot(aes(unemployment_rate)) +
-  geom_histogram(binwidth = 0.25, fill = "forestgreen", color = "black") +
-  labs(title = "Histogramm of enemployment in percent in Germany 2007 - 2026") +
+  ggplot(aes(x = date, y = unemployment_rate)) +
+  geom_line() +
+  labs(title = "Unemployment in percent in Germany 2017 - 2026") +
   theme_minimal()
 ```
 
@@ -59,7 +59,7 @@ unemp |>
 allbus_mini_clean %>%
   group_by(ep01) %>%
   summarise("Total amount" = n()) |>
-  rename("subjective state of the economy \n 1 = good 5 = bad" = ep01)
+  rename("subjective state of the economy (1 = good, 5 = bad)" = ep01)
 ```
 
 # 4. Analysis

@@ -4,7 +4,7 @@
     "href": "report.html",
     "title": "Report",
     "section": "",
-    "text": "Code\nlibrary(tidyverse)\nlibrary(here)\n\n\nWarning: Paket 'here' wurde unter R Version 4.5.3 erstellt\n\n\nCode\nlibrary(haven)\n\nallbus_mini_raw &lt;-\n  elect_clean &lt;- read_csv(here(\"data\", \"processed\", \"elect_clean.csv\"))\nunemp &lt;- read_csv(here(\"data\", \"processed\", \"unemp_clean.csv\"))\nallbus_mini_clean &lt;- read_dta(here(\"data\", \"processed\", \"allbus_mini_clean.dta\"))\nbip_clean &lt;- read_csv(here(\"data\", \"processed\", \"bip_clean.csv\"))\nskalierung_berechnen &lt;- function(dataset, variable) {\n  scale &lt;- max(elect_clean$afd, na.rm = TRUE) / max(abs(dataset[[variable]]), na.rm = TRUE)\n  return(scale)\n}"
+    "text": "Code\nlibrary(tidyverse)\nlibrary(here)\nlibrary(haven)\n\nallbus_mini_raw &lt;-\n  elect_clean &lt;- read_csv(here(\"data\", \"processed\", \"elect_clean.csv\"))\nunemp &lt;- read_csv(here(\"data\", \"processed\", \"unemp_clean.csv\"))\nallbus_mini_clean &lt;- read_dta(here(\"data\", \"processed\", \"allbus_mini_clean.dta\"))\nbip_clean &lt;- read_csv(here(\"data\", \"processed\", \"bip_clean.csv\"))\nskalierung_berechnen &lt;- function(dataset, variable) {\n  scale &lt;- max(elect_clean$afd, na.rm = TRUE) / max(abs(dataset[[variable]]), na.rm = TRUE)\n  return(scale)\n}"
   },
   {
     "objectID": "report.html#bip",
