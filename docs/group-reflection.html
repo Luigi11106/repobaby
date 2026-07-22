@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contributing – StatProg2 Group Project</title>
+<title>Group Reflection – StatProg2 Group Project</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Report</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./group-reflection.html"> 
+    <a class="nav-link active" href="./group-reflection.html" aria-current="page"> 
 <span class="menu-text">Reflection</span></a>
   </li>  
 </ul>
@@ -123,57 +123,152 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#contributions" id="toc-contributions" class="nav-link active" data-scroll-target="#contributions">Contributions</a>
+  <li><a href="#skills-inventory" id="toc-skills-inventory" class="nav-link active" data-scroll-target="#skills-inventory">Skills inventory</a>
   <ul class="collapse">
-  <li><a href="#group-members" id="toc-group-members" class="nav-link" data-scroll-target="#group-members">Group Members</a></li>
+  <li><a href="#functions-refactoring-w2" id="toc-functions-refactoring-w2" class="nav-link" data-scroll-target="#functions-refactoring-w2">Functions &amp; refactoring (W2)</a></li>
+  <li><a href="#debugging-w3" id="toc-debugging-w3" class="nav-link" data-scroll-target="#debugging-w3">Debugging (W3)</a></li>
+  <li><a href="#version-control-remotes-w4" id="toc-version-control-remotes-w4" class="nav-link" data-scroll-target="#version-control-remotes-w4">Version control &amp; remotes (W4)</a></li>
+  <li><a href="#quarto-websites-collaborative-coding-w5" id="toc-quarto-websites-collaborative-coding-w5" class="nav-link" data-scroll-target="#quarto-websites-collaborative-coding-w5">Quarto websites &amp; collaborative coding (W5)</a></li>
+  <li><a href="#r-packages-w6" id="toc-r-packages-w6" class="nav-link" data-scroll-target="#r-packages-w6">R packages (W6)</a></li>
+  <li><a href="#initial-data-analysis-data-cleaning-w7" id="toc-initial-data-analysis-data-cleaning-w7" class="nav-link" data-scroll-target="#initial-data-analysis-data-cleaning-w7">Initial data analysis &amp; data cleaning (W7)</a></li>
+  <li><a href="#reproducibility-open-data-renv-w9" id="toc-reproducibility-open-data-renv-w9" class="nav-link" data-scroll-target="#reproducibility-open-data-renv-w9">Reproducibility, open data &amp; renv (W9)</a></li>
+  <li><a href="#analysis-inference-strategies-w10" id="toc-analysis-inference-strategies-w10" class="nav-link" data-scroll-target="#analysis-inference-strategies-w10">Analysis &amp; inference strategies (W10)</a></li>
+  <li><a href="#communication-visualisation-w11" id="toc-communication-visualisation-w11" class="nav-link" data-scroll-target="#communication-visualisation-w11">Communication &amp; visualisation (W11)</a></li>
+  </ul></li>
+  <li><a href="#key-analytical-decisions" id="toc-key-analytical-decisions" class="nav-link" data-scroll-target="#key-analytical-decisions">Key analytical decisions</a>
+  <ul class="collapse">
+  <li><a href="#decision-1-short-title" id="toc-decision-1-short-title" class="nav-link" data-scroll-target="#decision-1-short-title">Decision 1: [short title]</a></li>
+  <li><a href="#decision-2-short-title" id="toc-decision-2-short-title" class="nav-link" data-scroll-target="#decision-2-short-title">Decision 2: [short title]</a></li>
+  </ul></li>
+  <li><a href="#workflow-collaboration" id="toc-workflow-collaboration" class="nav-link" data-scroll-target="#workflow-collaboration">Workflow &amp; collaboration</a></li>
+  <li><a href="#llm-usage" id="toc-llm-usage" class="nav-link" data-scroll-target="#llm-usage">LLM usage</a>
+  <ul class="collapse">
+  <li><a href="#usage-1-task" id="toc-usage-1-task" class="nav-link" data-scroll-target="#usage-1-task">Usage 1: [task]</a></li>
+  <li><a href="#usage-2-task" id="toc-usage-2-task" class="nav-link" data-scroll-target="#usage-2-task">Usage 2: [task]</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Group Reflection</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<hr>
-<hr>
-<section id="contributions" class="level1">
-<h1>Contributions</h1>
-<section id="group-members" class="level2">
-<h2 class="anchored" data-anchor-id="group-members">Group Members</h2>
-<p>Disclaimer: Most of the files were edited by more than one team member, because we took turn in editing certain parts. Especially in the beginning, most of the coding was done via team call, so only one memberof the team wrote.</p>
-<p><strong>[Luis Baumgartner]</strong> — [01_download.R, 02_prepare_allbus_dataset.R, 03_clean.R, CONTRIBUTING.md] - [Coordination] - [Weighting variable research] - [Data download &amp; Cleaning] - [Keeping the index updated] - [Collaborative: Creating &amp; Updating the proposal.qmd file]</p>
-<p><strong>[Colin Reck]</strong> — [files/sections responsible for] - [Key task 1] - [Key task 2] - [Collaborative: Creating &amp; Updating the proposal.qmd file]</p>
-<p><strong>[Luca Friedel]</strong> — [04_EDA.R, README.md] - [Data plotting &amp; modeling] - [Key task 2] - [Collaborative: Creating &amp; Updating the proposal.qmd file]</p>
-<p><strong>[Paul Petras]</strong> — [05_analysis] - [Technical Expertise] - [Workflow Organization] - [Initial setup] - [Collaborative: Creating &amp; Updating the proposal.qmd file]</p>
-<!-- Complete per the department guidelines:
-     https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds -->
-<p>## Disclosure of AI Tool’s</p>
-<p>Department guidelines: https://docs.google.com/document/d/1mQ5YAWKDt9Ax4LvK-wuUzO5XfCI0e-ZGdk49ghb08Ds</p>
-<p>Following AI tools were used in this project:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 32%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Tool</th>
-<th>Purpose</th>
-<th>Scope</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>ChatGPT</td>
-<td>Spell checking, proofreading</td>
-<td>Texts, that are not the analysis of the data</td>
-</tr>
-</tbody>
-</table>
-<p>All AI-generated code and text was reviewed and verified by a group member before inclusion.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="skills-inventory" class="level2">
+<h2 class="anchored" data-anchor-id="skills-inventory">Skills inventory</h2>
+<p>For each skill area, describe what your group actually used it for. If you did not use a skill, say so and note why.</p>
+<section id="functions-refactoring-w2" class="level3">
+<h3 class="anchored" data-anchor-id="functions-refactoring-w2">Functions &amp; refactoring (W2)</h3>
+<p><em>What we did:</em> We only created a function once (till now), because other repeating tasks werent suitable for functions.</p>
+<p><em>What worked well:</em> The one function we created works quite well (its a really simple one)</p>
+<p><em>What would have been hard:</em> To create a function that generates our plots. Because our plots use little to no repeating data, a function would have required a large number of arguments as input. It was faster and easier to rewrite the short section that repeated once. The other problem was that we always used different data sets for each chart, which would have required even more arguments for the function. If we had found a dataset that contained all the necessary variables, we could have written a function</p>
+</section>
+<section id="debugging-w3" class="level3">
+<h3 class="anchored" data-anchor-id="debugging-w3">Debugging (W3)</h3>
+<p><em>What we did:</em> We wrote a significant portion of the code together during calls, where the four of us were able to quickly resolve most errors. Since we had (and still have) widely varying levels of prior knowledge, we were able to help each other effectively within the group. Otherwise, we tried to interpret R’s error messages, using AI as a last resort to have the errors explained to us. This allowed us to fix all the errors independently without having to blindly copy code from the AI.</p>
+<p><em>What worked well:</em> Helping each other within the group</p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="version-control-remotes-w4" class="level3">
+<h3 class="anchored" data-anchor-id="version-control-remotes-w4">Version control &amp; remotes (W4)</h3>
+<p><em>What we did:</em> We frequently created new branches so that we could all work on different aspects of the project simultaneously. Either a branch was worked on by only one person at a time, or—if multiple people were working on the same branch—we clearly communicated beforehand who was allowed to edit which file to avoid conflicts. Thanks to version control, we could always revert to an earlier state, though we haven’t needed to do so (so far). GitHub also ensured that everyone was notified whenever someone else completed a task. About halfway through the project, we adopted a workflow that worked well for everyone: we would call each other at midday to discuss what needed to be done. Afterward, tasks were assigned, and everyone worked on their respective parts, uploading their work once finished. In this way, we worked our way toward completion step by step.</p>
+<p><em>What worked well:</em> We started by coding together via a call. Later, we coordinated together, followed by individual coding. Thanks to Git, there were no version conflicts.</p>
+<p><em>What was hard:</em> Establishing our system. In the beginning, changes were sometimes made directly to the main branch; due to unclear communication and a failure to create separate branches, people would edit the same file simultaneously, leading to conflicts that could have easily been avoided.</p>
+</section>
+<section id="quarto-websites-collaborative-coding-w5" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-websites-collaborative-coding-w5">Quarto websites &amp; collaborative coding (W5)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="r-packages-w6" class="level3">
+<h3 class="anchored" data-anchor-id="r-packages-w6">R packages (W6)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="initial-data-analysis-data-cleaning-w7" class="level3">
+<h3 class="anchored" data-anchor-id="initial-data-analysis-data-cleaning-w7">Initial data analysis &amp; data cleaning (W7)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="reproducibility-open-data-renv-w9" class="level3">
+<h3 class="anchored" data-anchor-id="reproducibility-open-data-renv-w9">Reproducibility, open data &amp; renv (W9)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="analysis-inference-strategies-w10" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-inference-strategies-w10">Analysis &amp; inference strategies (W10)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+<section id="communication-visualisation-w11" class="level3">
+<h3 class="anchored" data-anchor-id="communication-visualisation-w11">Communication &amp; visualisation (W11)</h3>
+<p><em>What we did:</em></p>
+<p><em>What worked well:</em></p>
+<p><em>What was hard:</em></p>
+</section>
+</section>
+<section id="key-analytical-decisions" class="level2">
+<h2 class="anchored" data-anchor-id="key-analytical-decisions">Key analytical decisions</h2>
+<p>Describe 2–3 decisions that had a meaningful effect on your results or workflow.</p>
+<section id="decision-1-short-title" class="level3">
+<h3 class="anchored" data-anchor-id="decision-1-short-title">Decision 1: [short title]</h3>
+<p><em>What were we deciding between?</em></p>
+<p><em>How did we reason through it?</em></p>
+<p><em>In hindsight, would we decide differently?</em></p>
+</section>
+<section id="decision-2-short-title" class="level3">
+<h3 class="anchored" data-anchor-id="decision-2-short-title">Decision 2: [short title]</h3>
+<p><em>What were we deciding between?</em></p>
+<p><em>How did we reason through it?</em></p>
+<p><em>In hindsight, would we decide differently?</em></p>
+</section>
+</section>
+<section id="workflow-collaboration" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-collaboration">Workflow &amp; collaboration</h2>
+<p><em>How did we divide work across group members?</em></p>
+<p><em>What branching or Git workflow did we actually use — and did it match the proposal?</em></p>
+<p><em>What would we change about how we coordinated?</em></p>
+</section>
+<section id="llm-usage" class="level2">
+<h2 class="anchored" data-anchor-id="llm-usage">LLM usage</h2>
+<p>Describe up to 5 significant uses of an LLM tool during the project.</p>
+<section id="usage-1-task" class="level3">
+<h3 class="anchored" data-anchor-id="usage-1-task">Usage 1: [task]</h3>
+<ul>
+<li><strong>Tool / model:</strong></li>
+<li><strong>What it produced:</strong></li>
+<li><strong>What we had to correct or verify:</strong></li>
+</ul>
+</section>
+<section id="usage-2-task" class="level3">
+<h3 class="anchored" data-anchor-id="usage-2-task">Usage 2: [task]</h3>
+<ul>
+<li><strong>Tool / model:</strong></li>
+<li><strong>What it produced:</strong></li>
+<li><strong>What we had to correct or verify:</strong></li>
+</ul>
 
 
 </section>
