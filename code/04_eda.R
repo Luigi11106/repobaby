@@ -19,7 +19,7 @@ bip_clean <- read_csv(here("data", "processed", "bip_clean.csv"))
 glimpse(elect_clean)
 
 elect_clean %>% ggplot(aes(x = date, y = afd)) +
-  geom_path()
+  geom_path()+
 # We conclude:
 # 1. Decline during 2017
 # 2. Resurface late in 2017
