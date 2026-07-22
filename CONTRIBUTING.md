@@ -25,9 +25,9 @@ Especially in the beginning, most of the coding was done via team call, so only 
 - \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 **\[Luca Friedel\]** 
-— \[04_EDA.R, README.md\] 
+— \[04_EDA.R, README.md, group-reflection.qmd\] 
 - \[Data plotting & modeling\] 
-- \[Key task 2\] 
+- \[working on the group reflection\] 
 - \[Collaborative: Creating & Updating the proposal.qmd file\]
 
 **\[Paul Petras\]** 
