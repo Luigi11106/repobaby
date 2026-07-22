@@ -21,8 +21,9 @@ Especially in the beginning, most of the coding was done via team call, so only 
 - Collaborative: Creating & Updating the proposal.qmd file
 
 **Luca Friedel** 
-— 04_EDA.R, README.md, group-reflection.qmd
+— report.qmd, 04_EDA.R, README.md, group-reflection.qmd
 - Data plotting & modeling
+- writing the report
 - working on the group reflection 
 - Collaborative: Creating & Updating the proposal.qmd file
 
