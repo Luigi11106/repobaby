@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,10 +39,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./proposal.pdf"> 
+    <a class="nav-link" href="./proposal.html"> 
 <span class="menu-text">Proposal</span></a>
   </li>  
   <li class="nav-item">
@@ -137,14 +137,16 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#key-analytical-decisions" id="toc-key-analytical-decisions" class="nav-link" data-scroll-target="#key-analytical-decisions">Key analytical decisions</a>
   <ul class="collapse">
-  <li><a href="#decision-1-short-title" id="toc-decision-1-short-title" class="nav-link" data-scroll-target="#decision-1-short-title">Decision 1: [short title]</a></li>
-  <li><a href="#decision-2-short-title" id="toc-decision-2-short-title" class="nav-link" data-scroll-target="#decision-2-short-title">Decision 2: [short title]</a></li>
+  <li><a href="#decision-1-world-bank-or-allbus" id="toc-decision-1-world-bank-or-allbus" class="nav-link" data-scroll-target="#decision-1-world-bank-or-allbus">Decision 1: World Bank or allbus?</a></li>
+  <li><a href="#decision-2-allbus-2021-or-cumulative-allbus" id="toc-decision-2-allbus-2021-or-cumulative-allbus" class="nav-link" data-scroll-target="#decision-2-allbus-2021-or-cumulative-allbus">Decision 2: allbus 2021 or cumulative allbus?</a></li>
+  <li><a href="#decision-3-expand-to-multiple-data-sets" id="toc-decision-3-expand-to-multiple-data-sets" class="nav-link" data-scroll-target="#decision-3-expand-to-multiple-data-sets">Decision 3: expand to multiple data sets?</a></li>
   </ul></li>
   <li><a href="#workflow-collaboration" id="toc-workflow-collaboration" class="nav-link" data-scroll-target="#workflow-collaboration">Workflow &amp; collaboration</a></li>
   <li><a href="#llm-usage" id="toc-llm-usage" class="nav-link" data-scroll-target="#llm-usage">LLM usage</a>
   <ul class="collapse">
-  <li><a href="#usage-1-task" id="toc-usage-1-task" class="nav-link" data-scroll-target="#usage-1-task">Usage 1: [task]</a></li>
-  <li><a href="#usage-2-task" id="toc-usage-2-task" class="nav-link" data-scroll-target="#usage-2-task">Usage 2: [task]</a></li>
+  <li><a href="#usage-1-license-checkup" id="toc-usage-1-license-checkup" class="nav-link" data-scroll-target="#usage-1-license-checkup">Usage 1: License checkup</a></li>
+  <li><a href="#usage-2-allbus-issue-consultation" id="toc-usage-2-allbus-issue-consultation" class="nav-link" data-scroll-target="#usage-2-allbus-issue-consultation">Usage 2: allbus issue consultation</a></li>
+  <li><a href="#usage-3-git-issues-conflict-resolution" id="toc-usage-3-git-issues-conflict-resolution" class="nav-link" data-scroll-target="#usage-3-git-issues-conflict-resolution">Usage 3: Git issues / conflict resolution</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -176,7 +178,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For each skill area, describe what your group actually used it for. If you did not use a skill, say so and note why.</p>
 <section id="functions-refactoring-w2" class="level3">
 <h3 class="anchored" data-anchor-id="functions-refactoring-w2">Functions &amp; refactoring (W2)</h3>
-<p><em>What we did:</em> We only created a function once (till now), because other repeating tasks werent suitable for functions.</p>
+<p><em>What we did:</em> We only created a function once (till now), because other repeating tasks were not suitable for functions.</p>
 <p><em>What worked well:</em> The one function we created works quite well (its a really simple one)</p>
 <p><em>What would have been hard:</em> To create a function that generates our plots. Because our plots use little to no repeating data, a function would have required a large number of arguments as input. It was faster and easier to rewrite the short section that repeated once. The other problem was that we always used different data sets for each chart, which would have required even more arguments for the function. If we had found a dataset that contained all the necessary variables, we could have written a function</p>
 </section>
@@ -184,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="debugging-w3">Debugging (W3)</h3>
 <p><em>What we did:</em> We wrote a significant portion of the code together during calls, where the four of us were able to quickly resolve most errors. Since we had (and still have) widely varying levels of prior knowledge, we were able to help each other effectively within the group. Otherwise, we tried to interpret R’s error messages, using AI as a last resort to have the errors explained to us. This allowed us to fix all the errors independently without having to blindly copy code from the AI.</p>
 <p><em>What worked well:</em> Helping each other within the group</p>
-<p><em>What was hard:</em></p>
+<p><em>What was hard: /</em></p>
 </section>
 <section id="version-control-remotes-w4" class="level3">
 <h3 class="anchored" data-anchor-id="version-control-remotes-w4">Version control &amp; remotes (W4)</h3>
@@ -194,27 +196,27 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="quarto-websites-collaborative-coding-w5" class="level3">
 <h3 class="anchored" data-anchor-id="quarto-websites-collaborative-coding-w5">Quarto websites &amp; collaborative coding (W5)</h3>
-<p><em>What we did:</em></p>
-<p><em>What worked well:</em></p>
-<p><em>What was hard:</em></p>
+<p><em>What we did:</em> We experimented with rendering our website and looked at early rendered outputs. This gave us feedback as to what parts of our repository structure worked and what did not.</p>
+<p><em>What worked well:</em> Editing the index in _quarto.yml to give us the desired project structure was luckily very simple and allowed us to fix the structure very quickly.</p>
+<p><em>What was hard:</em> During rendering, we did run into conflicts, notably the allbus_mini data set, but we did eventually find the issues and made it work.</p>
 </section>
 <section id="r-packages-w6" class="level3">
 <h3 class="anchored" data-anchor-id="r-packages-w6">R packages (W6)</h3>
-<p><em>What we did:</em></p>
-<p><em>What worked well:</em></p>
-<p><em>What was hard:</em></p>
+<p><em>What we did:</em> After an in-group discussion, we decided not to create a project-specific R package, because our goals did not require the use of complicated and manually generated functions.</p>
+<p><em>What worked well:</em> The in-group discussion went very quickly and we came to a fast agreement.</p>
+<p><em>What was hard:</em> This week, nothing really.</p>
 </section>
 <section id="initial-data-analysis-data-cleaning-w7" class="level3">
 <h3 class="anchored" data-anchor-id="initial-data-analysis-data-cleaning-w7">Initial data analysis &amp; data cleaning (W7)</h3>
-<p><em>What we did:</em></p>
-<p><em>What worked well:</em></p>
-<p><em>What was hard:</em></p>
+<p><em>What we did:</em> After choosing the cumulative allbus data set, we quickly ran into the problem of storage. The original file was over 160MB large and by far exceeded the limit GitHub allowed us to push (100MB). After an in-group discussion, as well as talking to the tutors, we manually filtered the large data set into topics that were relevant to the project and added a reproducible code to track exactly what we cut from the original file. The other files used in this project posed different problems. After the exhausting act of data download was completed, all data sets had to be cleaned next. This too was no easy task, especially creating a helpful time variable was at times complicated to create, because some data sets had strange encodings for the time variable. Other data sets did not follow common structural rules and treated the csv file like a spread sheet with strange subcategories in the middle of the table. Once all data sets were cleaned into a clean and acceptable format, working became much easier.</p>
+<p><em>What worked well:</em> Finding Open Source data sets about the topics we wanted to cover.</p>
+<p><em>What was hard:</em> Finding <strong>acceptably structured</strong> Open source data sets about the topics we wanted to cover.</p>
 </section>
 <section id="reproducibility-open-data-renv-w9" class="level3">
 <h3 class="anchored" data-anchor-id="reproducibility-open-data-renv-w9">Reproducibility, open data &amp; renv (W9)</h3>
-<p><em>What we did:</em></p>
-<p><em>What worked well:</em></p>
-<p><em>What was hard:</em></p>
+<p><em>What we did:</em> Like the individual R package, an in-group discussion lead to the conclusion that Renv was not sensible for the limited scale of our project. What we did have to to in this department is look up the licenses of the data sets we used. Some were easy to find, others were hidden under an enormous amount of layers on several websites. For future projects, we learned that license documentation should be done instantly once one decides to include a data set.</p>
+<p><em>What worked well:</em> Coming to unanimous decisions within the group.</p>
+<p><em>What was hard:</em> Finding the license for the German unemployment data covered behind a dozen windows on the website of the unemployment agency.</p>
 </section>
 <section id="analysis-inference-strategies-w10" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-inference-strategies-w10">Analysis &amp; inference strategies (W10)</h3>
@@ -231,43 +233,64 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="key-analytical-decisions" class="level2">
 <h2 class="anchored" data-anchor-id="key-analytical-decisions">Key analytical decisions</h2>
-<p>Describe 2–3 decisions that had a meaningful effect on your results or workflow.</p>
-<section id="decision-1-short-title" class="level3">
-<h3 class="anchored" data-anchor-id="decision-1-short-title">Decision 1: [short title]</h3>
-<p><em>What were we deciding between?</em></p>
-<p><em>How did we reason through it?</em></p>
-<p><em>In hindsight, would we decide differently?</em></p>
+<section id="decision-1-world-bank-or-allbus" class="level3">
+<h3 class="anchored" data-anchor-id="decision-1-world-bank-or-allbus">Decision 1: World Bank or allbus?</h3>
+<ul>
+<li><p>In the beginning, we had the option to use either the data from the World Bank, or allbus.</p></li>
+<li><p>We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier, we thought.</p></li>
+<li><p>Note that at this point, we had not run into the problems the allbus data set would impose later down the line.</p></li>
+<li><p>In hindsight, choosing the allbus data set probably caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.</p></li>
+</ul>
 </section>
-<section id="decision-2-short-title" class="level3">
-<h3 class="anchored" data-anchor-id="decision-2-short-title">Decision 2: [short title]</h3>
-<p><em>What were we deciding between?</em></p>
-<p><em>How did we reason through it?</em></p>
-<p><em>In hindsight, would we decide differently?</em></p>
+<section id="decision-2-allbus-2021-or-cumulative-allbus" class="level3">
+<h3 class="anchored" data-anchor-id="decision-2-allbus-2021-or-cumulative-allbus">Decision 2: allbus 2021 or cumulative allbus?</h3>
+<ul>
+<li><p>After deciding to go with the allbus data, we faced another decision.</p></li>
+<li><p>Only analysing one point in time makes it hard to form conclusions about anything.</p></li>
+<li><p>We also realized we were completely missing time-variate variables.</p></li>
+<li><p>For this reason, we switched to the cumulative allbus data from 1980 to 2023</p></li>
+<li><p>After choosing the data, we would run into the problem with the size of the file, but the previous data was no longer an option because we were missing a time variable.</p></li>
+</ul>
+</section>
+<section id="decision-3-expand-to-multiple-data-sets" class="level3">
+<h3 class="anchored" data-anchor-id="decision-3-expand-to-multiple-data-sets">Decision 3: expand to multiple data sets?</h3>
+<ul>
+<li>Realizing that only analyzing opinions without adding objective data would make the analysis between AfD-polling (by then we had agreed on what our dependent variable would be) and multiple factors weak, we decided to add the GDP and the unemployment data to the mix and strengthen our findings</li>
+</ul>
 </section>
 </section>
 <section id="workflow-collaboration" class="level2">
 <h2 class="anchored" data-anchor-id="workflow-collaboration">Workflow &amp; collaboration</h2>
 <p><em>How did we divide work across group members?</em></p>
+<p>We assigned tasks only as they emerged to be as flexible as possible.</p>
 <p><em>What branching or Git workflow did we actually use — and did it match the proposal?</em></p>
-<p><em>What would we change about how we coordinated?</em></p>
+<p>We used the exact strategy as proposed. Every section of tasks was done on its own branch, mostly by only one person at a time. We used a github workflow to ensure strict style according to styler guidelines but intentionally deactivated the compile check due to R just not being made to be used with github workflows.</p>
+<p><em>What would we change about how we coordinated? /</em></p>
 </section>
 <section id="llm-usage" class="level2">
 <h2 class="anchored" data-anchor-id="llm-usage">LLM usage</h2>
-<p>Describe up to 5 significant uses of an LLM tool during the project.</p>
-<section id="usage-1-task" class="level3">
-<h3 class="anchored" data-anchor-id="usage-1-task">Usage 1: [task]</h3>
+<section id="usage-1-license-checkup" class="level3">
+<h3 class="anchored" data-anchor-id="usage-1-license-checkup">Usage 1: License checkup</h3>
 <ul>
-<li><strong>Tool / model:</strong></li>
-<li><strong>What it produced:</strong></li>
-<li><strong>What we had to correct or verify:</strong></li>
+<li>Google Gemini</li>
+<li>Own suggestions what licenses were correct</li>
+<li>Telling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.</li>
 </ul>
 </section>
-<section id="usage-2-task" class="level3">
-<h3 class="anchored" data-anchor-id="usage-2-task">Usage 2: [task]</h3>
+<section id="usage-2-allbus-issue-consultation" class="level3">
+<h3 class="anchored" data-anchor-id="usage-2-allbus-issue-consultation">Usage 2: allbus issue consultation</h3>
 <ul>
-<li><strong>Tool / model:</strong></li>
-<li><strong>What it produced:</strong></li>
-<li><strong>What we had to correct or verify:</strong></li>
+<li>Google Gemini</li>
+<li>Solution suggestions</li>
+<li>Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.</li>
+</ul>
+</section>
+<section id="usage-3-git-issues-conflict-resolution" class="level3">
+<h3 class="anchored" data-anchor-id="usage-3-git-issues-conflict-resolution">Usage 3: Git issues / conflict resolution</h3>
+<ul>
+<li><p>Google Gemini</p></li>
+<li><p>Helpful git commands</p></li>
+<li><p>When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.</p></li>
 </ul>
 
 
