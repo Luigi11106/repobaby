@@ -54,7 +54,7 @@ ggplot() +
     axis.text.y = element_text(color = "blue"),
     axis.title.y.right = element_text(color = "red", face = "bold"),
     axis.text.y.right = element_text(color = "red")
-  )+
+  ) +
   labs(title = "Afd polling numbers compared to real GDP growth\n in Germany 2017 - 2026")
 
 ggsave(filename = here("plots", "BIP_AFD.png"))
@@ -110,46 +110,46 @@ ggplot() +
   scale_y_continuous(
     name = "AfD - polling",
     sec.axis = sec_axis(~ . / skalierung_unemp, name = "Unemployment share")
-    )+
+  ) +
   theme_minimal() +
   theme(
     axis.title.y = element_text(color = "blue", face = "bold"),
     axis.text.y = element_text(color = "blue"),
     axis.title.y.right = element_text(color = "red", face = "bold"),
     axis.text.y.right = element_text(color = "red")
-  )+
+  ) +
   labs(title = "Afd polling numbers compared to unemployment rate\n in Germany 2017 - 2026")
 
 ggsave(filename = here("plots", "UNEMPLOYMENT_AFD.png"))
 
-#conclusion
-#until 2020 no meaningful link is present
-#2020 - 2022 there is a inverse correlation, unemp rises, afd numers fall
-#since 2022, unemp steadily rises, afd also gains in the long term
+# conclusion
+# until 2020 no meaningful link is present
+# 2020 - 2022 there is a inverse correlation, unemp rises, afd numers fall
+# since 2022, unemp steadily rises, afd also gains in the long term
 
 
 #----------------------------------------------------------------------
-#allbus importieren
-#wir verwenden allbus_mini_clean aus skript 03
-#ep01 muss gewichtet werden
+# allbus importieren
+# wir verwenden allbus_mini_clean aus skript 03
+# ep01 muss gewichtet werden
 ep01_wght <- allbus_mini_raw |>
   filter(!(ep01 %in% c(-42, -11, -9, -8, -1))) |>
   group_by(year) |>
   summarise(ep01_mean = weighted.mean(ep01, w = wghtpew, na.rm = TRUE)) |>
   filter(year > 2014)
 
-#afd polling numbers mean per year
+# afd polling numbers mean per year
 avg_year_afd <- elect_clean |>
- group_by(jahr = format(date, "%Y")) %>%
-           summarise(
-             mittelwert = mean(afd, na.rm = TRUE)
-           ) |>
+  group_by(jahr = format(date, "%Y")) %>%
+  summarise(
+    mittelwert = mean(afd, na.rm = TRUE)
+  ) |>
   mutate(jahr = as.integer(jahr))
 
-#skalierung afd / econ satisfaction
+# skalierung afd / econ satisfaction
 skalierung_ep01 <- skalierung_berechnen(ep01_wght, "ep01_mean")
 
-#plot economy satisfaction x afd polling number
+# plot economy satisfaction x afd polling number
 ggplot() +
   geom_point(
     data = avg_year_afd,
@@ -158,7 +158,7 @@ ggplot() +
       y = mittelwert
     ),
     color = "blue"
-  )+
+  ) +
   geom_line(
     data = avg_year_afd,
     aes(
@@ -166,7 +166,7 @@ ggplot() +
       y = mittelwert
     ),
     color = "blue"
-  )+
+  ) +
   geom_point(
     data = ep01_wght,
     aes(
@@ -174,7 +174,7 @@ ggplot() +
       y = ep01_mean * skalierung_ep01
     ),
     color = "red"
-  )+
+  ) +
   geom_line(
     data = ep01_wght,
     aes(
@@ -182,22 +182,21 @@ ggplot() +
       y = ep01_mean * skalierung_ep01
     ),
     color = "red"
-  )+
+  ) +
   scale_y_continuous(
     name = "AfD - polling",
     sec.axis = sec_axis(~ . / skalierung_unemp, name = "Satisfaction with economy \n (1 = very good, 3 = somewhat, 5 = very bad)")
-  )+
+  ) +
   theme_minimal() +
   theme(
     axis.title.y = element_text(color = "blue", face = "bold"),
     axis.text.y = element_text(color = "blue"),
     axis.title.y.right = element_text(color = "red", face = "bold"),
     axis.text.y.right = element_text(color = "red")
-  )+
+  ) +
   labs(title = "Afd polling numbers compared to economic satisfaction\n in Germany 2017 - 2026")
 
 ggsave(filename = here("plots", "ECON_SATISFACTION_AFD.png"))
-#conclusion
-#limitation: ony 3 allbus rounds while afd exists
-#but trens is visible, worse economic situation correaltes to rising afd numbers
-
+# conclusion
+# limitation: ony 3 allbus rounds while afd exists
+# but trens is visible, worse economic situation correaltes to rising afd numbers

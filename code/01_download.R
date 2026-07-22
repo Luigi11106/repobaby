@@ -27,4 +27,3 @@ unemp <- read_csv2(
 elect_raw <- read.csv(here("data", "raw", "election_survey.csv"))
 
 message("Raw data already present — delete data/raw/ and re-run to refresh.")
-
