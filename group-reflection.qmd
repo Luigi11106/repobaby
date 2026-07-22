@@ -21,7 +21,7 @@ For each skill area, describe what your group actually used it for. If you did n
 
 *What worked well:* Helping each other within the group
 
-*What was hard:*
+*What was hard: /*
 
 ### Version control & remotes (W4)
 
@@ -83,56 +83,60 @@ For each skill area, describe what your group actually used it for. If you did n
 
 ### Decision 1: World Bank or allbus?
 
--   In the beginning, we had the option to use either the data from the World Bank, or allbus.
+- In the beginning, we had the option to use either the data from the World Bank, or allbus.
 
--   We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier, we thought.
+- We decided against the World Bank and for allbus, because we liked that it was one giant data set instead of having to manually construct a data set from the World Bank. This would make documenting the raw data much easier, we thought.
 
--   Note that at this point, we had not run into the problems the allbus data set would impose later down the line.
+- Note that at this point, we had not run into the problems the allbus data set would impose later down the line.
 
--   In hindsight, choosing the allbus data set probably caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.
+- In hindsight, choosing the allbus data set probably caused more stress than the World Bank data would have. But at least we learned how to deal with data that is simply too large to be pushed into GitHub.
 
 ### Decision 2: allbus 2021 or cumulative allbus?
 
--   After deciding to go with the allbus data, we faced another decision.
+- After deciding to go with the allbus data, we faced another decision.
 
--   Only analysing one point in time makes it hard to form conclusions about anything.
+- Only analysing one point in time makes it hard to form conclusions about anything.
 
--   We also realized we were completely missing time-variate variables.
+- We also realized we were completely missing time-variate variables.
 
--   For this reason, we switched to the cumulative allbus data from 1980 to 2023
+- For this reason, we switched to the cumulative allbus data from 1980 to 2023
 
--   After choosing the data, we would run into the problem with the size of the file, but the previous data was no longer an option because we were missing a time variable.
+- After choosing the data, we would run into the problem with the size of the file, but the previous data was no longer an option because we were missing a time variable.
 
 ### Decision 3: expand to multiple data sets?
 
--   Realizing that only analyzing opinions without adding objective data would make the analysis between AfD-polling (by then we had agreed on what our dependent variable would be) and multiple factors weak, we decided to add the GDP and the unemployment data to the mix and strengthen our findings
+- Realizing that only analyzing opinions without adding objective data would make the analysis between AfD-polling (by then we had agreed on what our dependent variable would be) and multiple factors weak, we decided to add the GDP and the unemployment data to the mix and strengthen our findings
 
 ## Workflow & collaboration
 
 *How did we divide work across group members?*
 
+We assigned tasks only as they emerged to be as flexible as possible.
+
 *What branching or Git workflow did we actually use — and did it match the proposal?*
 
-*What would we change about how we coordinated?*
+We used the exact strategy as proposed. Every section of tasks was done on its own branch, mostly by only one person at a time. We used a github workflow to ensure strict style according to styler guidelines but intentionally deactivated the compile check due to R just not being made to be used with github workflows.
+
+*What would we change about how we coordinated? /*
 
 ## LLM usage
 
 ### Usage 1: License checkup
 
--   Google Gemini
--   Own suggestions what licenses were correct
--   Telling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.
+- Google Gemini
+- Own suggestions what licenses were correct
+- Telling us what licenses belonged to the data set we used. Of course, we still had to look them up, but we could still check afterwards if what we found matched the results from the A.I.
 
 ### Usage 2: allbus issue consultation
 
--   Google Gemini
--   Solution suggestions
--   Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.
+- Google Gemini
+- Solution suggestions
+- Besides the group and the tutors, we also consulted with the A.I. about how to work around the problem with the large allbus data set.
 
 ### Usage 3: Git issues / conflict resolution
 
--   Google Gemini
+- Google Gemini
 
--   Helpful git commands
+- Helpful git commands
 
--   When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.
+- When running into conflicts when using git pull, or anything with git ever actually, the A.I. was often helpful in resolving the issues.
