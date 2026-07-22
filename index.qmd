@@ -22,8 +22,5 @@ We use the ALLBUS Cumulative Data Set together with official economic statistics
 
 ## Results
 
-<!-- Summary of key findings. -->
+AfD support remained relatively stable until 2022 before increasing sharply. Descriptive analyses suggest that weaker economic conditions, particularly in the post-pandemic period, were associated with higher AfD support. However, these findings are exploratory and require confirmation through regression analysis.
 
-## Discussion
-
-<!-- Interpret results, limitations, and next steps. -->
