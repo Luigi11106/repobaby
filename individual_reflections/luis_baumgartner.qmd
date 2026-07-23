@@ -1,0 +1,23 @@
+---
+title: "individual_contribution_statement"
+format: pdf
+editor: visual
+---
+
+Individual contribution statement - Luis Baumgartner:
+
+Choosing a data set:
+
+Once the collaborative project was announced, I started forming a group of students to work together with and together we would start researching for data sets we could use. My first suggestion was a data set from the World Bank, another student recommended the allbus 2021 data set. After an in-group discussion, we agreed on using the allbus data, because it was one cohesive data set with fixed boundaries, which made it easier to document as "raw data". Once it was time to come up with a research question however, we realized that allbus data from one year alone lacked the time variable that was required for this project, so I started researching for data sets again and found the cumulative data set "allbus compact", covering a time period from 1980 to 2023. We agreed to use this data set but soon realized that it was too large to be uploaded to GitHub. After consulting the group, the tutor and the A.I., we found a way to include the file. I cut down unnecessary items in a seperate code file and saved the new allbus_mini data in the data/processed folder and keeping the modification code in the project, making sure that we insured reproducability, as well as keeping the limits of the project within a size that was pushable to GitHub.
+
+Preparing & Cleaning the data sets:
+
+Once this problem was resolved, I researched and added two more data sets - covering GDP and unemployment - to the project to give us more variables to analyse. It was also my tasks to clean the data sets in a way that my colleagues could perform the EDA and analysis on them. This was surprisingly difficult at times, because the time variables in some data sets were hard to mutate into something that could actually be used as a time variable for plots. Other data sets had weird formats because they were treated like spreadsheets rather than data sets and had subcategories and random empty rows in them.
+
+Including weighting variables:
+
+Some time later, after I had to work with R in another subjects, I was made aware that if we wanted to make our survey data from allbus representative for a country, we had to resort to using one of the weighting variables included in the data set. After I had figured that out, I went back to preparing the allbus data so that the weighting was included in the mini data and could be used by the others in the EDA and when trying to plot the data.
+
+Coordination:
+
+Once these tasks were done, I mainly worked on coordinating the project, for example by initiating zoom meetings and helping others with tasks when needed. One of the final tasks I did was research again what exact licenses the used data sets went under.
