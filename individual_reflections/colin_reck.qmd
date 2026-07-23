@@ -1,0 +1,17 @@
+---
+title: "Individual reflection Colin Reck"
+format: pdf
+editor: visual
+---
+
+## Research question & project scope
+
+I contributed to developing and sharpening our research question on the relationship between German macroeconomic conditions and support for the AfD.
+
+## Exploratory data analysis
+
+I worked on the exploratory analysis. Interpreting the plot, I identified and described the distinct phases in AfD polling — the 2017 decline and recovery, the 2018–2020 stagnation, the drop during COVID, the steep increase across 2022 and 2023, the 2024 decline, and the slower but near-continuous growth since.
+
+## Analysis write-up
+
+My main individual responsibility was turning our analytical results into written findings. I drafted the findings section, structuring it as a description of AfD polling dynamics on their own, followed by the relationship with real GDP growth over time. The central substantive point I argued for was that the link between a weak economy and stronger AfD support appears more pronounced after COVID than before it, so the party did not benefit from the weak economy in that phase.
