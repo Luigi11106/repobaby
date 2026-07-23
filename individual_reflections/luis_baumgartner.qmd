@@ -1,5 +1,6 @@
 ---
 title: "individual_contribution_statement"
+format: pdf
 editor: visual
 ---
 
