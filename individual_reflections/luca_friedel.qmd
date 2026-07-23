@@ -1,0 +1,33 @@
+---
+title: "Individual Contribution Statement – Friedel Luca"
+format: pdf
+editor: visual
+---
+
+During the repobaby project, I mainly focused on the data visualization, documentation of our processes, and writing the final report. I also contributed to the exploratory-data-analysis (EDA) and the group reflection.
+
+------------------------------------------------------------------------
+
+At the beginning of the project, I helped edit the proposal.qmd file, making the plots more consistent. I changed the colors, added labels, and improved the layout to clean up the proposal.
+
+I completed the `README.md` file by adding the references of our datasets, including their licenses and links.
+
+I also worked on `04_EDA.R`, where I contributed to the exploratory data analysis. This helped (me) to better understand the dataset and decide which visualizations and analyses would be the best.
+
+In `05_analysis.R` I coded most of the plots that I then included in the final report. These visualizations were a key part of our analysis and helped present our main findings.
+
+I contributed to the `group-reflection.qmd` file after I talked with the others about their problems
+
+Finally, I wrote the whole final report for the project website. I combined the results from the EDA and the analysis, described the visualizations, and included the conclusions we had developed during the project.
+
+------------------------------------------------------------------------
+
+# My main takeaways
+
+One of the things I learned from this project, is how important communication is when working in a team. We realized that it works best if one person edits one file at a time on one branch, as this avoids merge conflicts.
+
+Another important lesson was how much I could learn from my teammates. One of us has IT as their major and shared a lot of tips. Overall, I found the project to be a valuable experience.
+
+------------------------------------------------------------------------
+
+Friedel Luca, 23.07.2026 Munich
